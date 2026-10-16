@@ -1,0 +1,38 @@
+services:
+  dwh_postgres:
+    image: postgres:15
+    container_name: dwh_postgres
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: adminpassword
+      POSTGRES_DB: autoparts_dwh
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U admin -d autoparts_dwh"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  # Одноразовий контейнер: генерує дані та завантажує їх у схему raw.
+  # Запускається вручну: docker compose run --rm data_loader
+  data_loader:
+    build: .
+    container_name: data_loader
+    depends_on:
+      dwh_postgres:
+        condition: service_healthy
+    environment:
+      DB_HOST: dwh_postgres
+      DB_PORT: "5432"
+      DB_USER: admin
+      DB_PASSWORD: adminpassword
+      DB_NAME: autoparts_dwh
+    volumes:
+      - ./data_lake:/app/data_lake
+    profiles: ["tools"]
+
+volumes:
+  pgdata:

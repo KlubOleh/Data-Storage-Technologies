@@ -1,14 +1,4 @@
-"""
-Генератор даних для варіанту 5: Магазин автозапчастин.
 
-Виміри (Dimensions): manufacturers, parts, car_owners
-Факти   (Facts):     sales, returns
-
-Навмисно додаються "брудні" дані (для очищення в dbt, ЛР №2):
-  * ~10% car_owners.email = NULL
-  * ~5% дублікатів у car_owners
-  * ~20% returns.comment = NULL
-"""
 import os
 import random
 

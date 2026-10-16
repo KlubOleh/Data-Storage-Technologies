@@ -11,9 +11,6 @@ random.seed(42)
 
 OUTPUT_DIR = "data_lake"
 
-# ==========================================
-# ВИМІРИ (DIMENSIONS)
-# ==========================================
 def generate_manufacturers():
     print("Генерація виробників...")
     items = [
@@ -74,14 +71,9 @@ def generate_car_owners(n):
             "registration_date": fake.date_between(start_date="-2y", end_date="today"),
         })
     df = pd.DataFrame(data)
-    # 5% дублікатів
     duplicates = df.sample(frac=0.05, random_state=42)
     return pd.concat([df, duplicates], ignore_index=True)
 
-
-# ==========================================
-# ФАКТИ (FACTS)
-# ==========================================
 def generate_sales(n, owner_ids, parts_df):
     print(f"Генерація {n} продажів...")
     prices = dict(zip(parts_df["part_id"], parts_df["price"]))
@@ -91,8 +83,8 @@ def generate_sales(n, owner_ids, parts_df):
         part_id = random.choice(part_ids)
         data.append({
             "sale_id": fake.uuid4(),
-            "owner_id": random.choice(owner_ids),   # FK
-            "part_id": part_id,                     # FK
+            "owner_id": random.choice(owner_ids),   
+            "part_id": part_id,                     
             "sale_date": fake.date_time_between(start_date="-1y", end_date="now"),
             "quantity": random.randint(1, 4),
             "unit_price": prices[part_id],
@@ -124,10 +116,6 @@ def generate_returns(n, sales_df):
         })
     return pd.DataFrame(data)
 
-
-# ==========================================
-# ОРКЕСТРАЦІЯ ГЕНЕРАЦІЇ
-# ==========================================
 def main():
     os.makedirs(OUTPUT_DIR, exist_ok=True)
     print("Починаємо генерацію даних...")

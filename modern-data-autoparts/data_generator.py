@@ -79,7 +79,7 @@ def generate_car_owners(n):
             "phone": fake.phone_number(),
             "city": fake.city(),
             "car_brand": random.choice(CAR_BRANDS),
-            "car_year": random.randint(1998, 2024),
+            "car_year": random.randint(1990, 2025),
             "registration_date": fake.date_between(start_date="-2y", end_date="today"),
         })
     df = pd.DataFrame(data)
@@ -155,11 +155,11 @@ def main():
 
     df_manufacturers = generate_manufacturers()
     df_parts = generate_parts(150, df_manufacturers["manufacturer_id"].tolist())
-    df_owners = generate_car_owners(600)
+    df_owners = generate_car_owners(6000000)
     unique_owner_ids = df_owners["owner_id"].unique().tolist()
-    df_sales = generate_sales(5000, unique_owner_ids, df_parts)
-    df_returns = generate_returns(400, df_sales)
-    df_reviews = generate_reviews(800, df_parts, unique_owner_ids)
+    df_sales = generate_sales(5000000, unique_owner_ids, df_parts)
+    df_returns = generate_returns(400000, df_sales)
+    df_reviews = generate_reviews(800000, df_parts, unique_owner_ids)
 
     tables = {
         "manufacturers": df_manufacturers,

@@ -15,9 +15,12 @@
 | `car_owners` | Dimension | Власники авто (клієнти) |
 | `sales` | **Fact** | Продажі (FK → car_owners, parts) |
 | `returns` | **Fact** | Повернення (FK → sales, car_owners, parts) |
+| `reviews` | **Fact** | Відгуки на запчастини (завдання 2 методички: `product_id` → parts, `user_id` → car_owners, `rating` 1–5, `comment`) |
+
+> Таблиця `reviews` завантажується в схему `raw` (ЛР №1). У dbt-моделях ЛР №2 вона не використовується.
 
 Навмисні «брудні» дані (для очищення в dbt у ЛР №2): ~10% `NULL` у `car_owners.email`,
-~5% дублікатів `car_owners`, ~20% `NULL` у `returns.comment`.
+~5% дублікатів `car_owners`, ~20% `NULL` у `returns.comment` та `reviews.comment`.
 
 ## Архітектура
 ```
@@ -44,6 +47,9 @@ docker exec -it dwh_postgres psql -U admin -d autoparts_dwh -c "SELECT COUNT(*) 
 ```
 Підключення з DBeaver/pgAdmin: `localhost:5432`, БД `autoparts_dwh`, користувач `admin`, пароль `adminpassword`.
 
+## Версії за лабораторними
+Стан репозиторію після ЛР №1 зафіксовано релізом [`Lab_1`](https://github.com/KlubOleh/Data-Storage-Technologies/releases/tag/Lab_1). Актуальна версія — у гілці `main`.
+
 ## ЛР №2: dbt і схема «Зірка»
 dbt запускається в Docker (`Dockerfile.dbt`), локальне встановлення не потрібне.
 ```bash
@@ -51,6 +57,13 @@ docker compose up -d
 docker compose run --rm dbt debug   # перевірка підключення
 docker compose run --rm dbt run     # побудова моделей у схемі analytics
 ```
+
+Перевірка результату (5 таблиць marts і 5 views staging у схемі `analytics`):
+```bash
+docker exec -it dwh_postgres psql -U admin -d autoparts_dwh -c "\dt analytics.*" -c "\dv analytics.*"
+docker exec -it dwh_postgres psql -U admin -d autoparts_dwh -c "SELECT (SELECT COUNT(*) FROM raw.car_owners) AS raw_rows, (SELECT COUNT(*) FROM analytics.dim_car_owners) AS dim_rows;"
+```
+Очищення працює без видалення даних: `raw.car_owners` (630 рядків із дублікатами) лишається незмінною, а `analytics.dim_car_owners` містить 600 унікальних власників.
 
 ### Структура dbt-проєкту (`autoparts_dbt/`)
 ```

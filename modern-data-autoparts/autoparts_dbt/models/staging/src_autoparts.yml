@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+  - name: raw_autoparts
+    schema: raw
+    tables:
+      - name: manufacturers
+      - name: parts
+      - name: car_owners
+      - name: sales
+      - name: returns

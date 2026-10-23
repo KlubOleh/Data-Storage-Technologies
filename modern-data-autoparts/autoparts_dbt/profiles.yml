@@ -1,0 +1,14 @@
+autoparts_dbt:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      # Усередині Docker-мережі хост = ім'я сервісу з docker-compose
+      host: "{{ env_var('DB_HOST', 'dwh_postgres') }}"
+      port: 5432
+      user: admin
+      password: adminpassword
+      dbname: autoparts_dwh
+      schema: analytics   # схема, куди dbt записує готові моделі
+      threads: 4
+      keepalives_idle: 0

@@ -34,5 +34,20 @@ services:
       - ./data_lake:/app/data_lake
     profiles: ["tools"]
 
+  # dbt (ЛР №2). Запуск: docker compose run --rm dbt run
+  dbt:
+    build:
+      context: .
+      dockerfile: Dockerfile.dbt
+    container_name: dbt
+    depends_on:
+      dwh_postgres:
+        condition: service_healthy
+    environment:
+      DB_HOST: dwh_postgres
+    volumes:
+      - ./autoparts_dbt:/usr/app
+    profiles: ["tools"]
+
 volumes:
   pgdata:

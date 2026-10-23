@@ -1,0 +1,2466 @@
+[0m13:25:25.014583 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7442e1ec0bd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7442e1ee2f10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7442e1ee01d0>]}
+
+
+============================== 13:25:25.022636 | a85a824b-809b-436c-86db-c2d27a3f74b8 ==============================
+[0m13:25:25.022636 [info ] [MainThread]: Running with dbt=1.8.8
+[0m13:25:25.025298 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'profiles_dir': '/usr/app', 'log_path': '/usr/app/logs', 'version_check': 'True', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'introspect': 'True', 'static_parser': 'True', 'invocation_command': 'dbt debug', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m13:25:25.033910 [info ] [MainThread]: dbt version: 1.8.8
+[0m13:25:25.035456 [info ] [MainThread]: python version: 3.11.17
+[0m13:25:25.039761 [info ] [MainThread]: python path: /usr/local/bin/python3.11
+[0m13:25:25.041109 [info ] [MainThread]: os info: Linux-6.18.54.1-microsoft-standard-WSL2-x86_64-with-glibc2.41
+[0m13:25:25.089244 [info ] [MainThread]: Using profiles dir at /usr/app
+[0m13:25:25.090975 [info ] [MainThread]: Using profiles.yml file at /usr/app/profiles.yml
+[0m13:25:25.093618 [info ] [MainThread]: Using dbt_project.yml file at /usr/app/dbt_project.yml
+[0m13:25:25.095974 [info ] [MainThread]: adapter type: postgres
+[0m13:25:25.098552 [info ] [MainThread]: adapter version: 1.8.2
+[0m13:25:25.173731 [info ] [MainThread]: Configuration:
+[0m13:25:25.175670 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m13:25:25.177407 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m13:25:25.178907 [info ] [MainThread]: Required dependencies:
+[0m13:25:25.180429 [debug] [MainThread]: Executing "git --help"
+[0m13:25:25.182621 [info ] [MainThread]:  - git [[31mERROR[0m]
+
+[0m13:25:25.184394 [info ] [MainThread]: Connection:
+[0m13:25:25.186612 [info ] [MainThread]:   host: dwh_postgres
+[0m13:25:25.188281 [info ] [MainThread]:   port: 5432
+[0m13:25:25.189925 [info ] [MainThread]:   user: admin
+[0m13:25:25.191454 [info ] [MainThread]:   database: autoparts_dwh
+[0m13:25:25.193152 [info ] [MainThread]:   schema: analytics
+[0m13:25:25.194575 [info ] [MainThread]:   connect_timeout: 10
+[0m13:25:25.196190 [info ] [MainThread]:   role: None
+[0m13:25:25.197891 [info ] [MainThread]:   search_path: None
+[0m13:25:25.199607 [info ] [MainThread]:   keepalives_idle: 0
+[0m13:25:25.201626 [info ] [MainThread]:   sslmode: None
+[0m13:25:25.203543 [info ] [MainThread]:   sslcert: None
+[0m13:25:25.205273 [info ] [MainThread]:   sslkey: None
+[0m13:25:25.207342 [info ] [MainThread]:   sslrootcert: None
+[0m13:25:25.208910 [info ] [MainThread]:   application_name: dbt
+[0m13:25:25.210362 [info ] [MainThread]:   retries: 1
+[0m13:25:25.212924 [info ] [MainThread]: Registered adapter: postgres=1.8.2
+[0m13:25:25.216645 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m13:25:25.236420 [debug] [MainThread]: Using postgres connection "debug"
+[0m13:25:25.238003 [debug] [MainThread]: On debug: select 1 as id
+[0m13:25:25.239795 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m13:25:25.248348 [debug] [MainThread]: SQL status: SELECT 1 in 0.009 seconds
+[0m13:25:25.250175 [debug] [MainThread]: On debug: Close
+[0m13:25:25.251686 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m13:25:25.253575 [info ] [MainThread]: [31m1 check failed:[0m
+[0m13:25:25.255094 [info ] [MainThread]: Error from git --help: Could not find command, ensure it is in the user's PATH: "git"
+
+[0m13:25:25.256957 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_wall_clock_time": 0.2967435, "process_user_time": 0.950497, "process_kernel_time": 0.145927, "process_mem_max_rss": "107456", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m13:25:25.258361 [debug] [MainThread]: Command `dbt debug` failed at 13:25:25.258245 after 0.30 seconds
+[0m13:25:25.259546 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m13:25:25.260646 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7442e20db710>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7442e20121d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7442e1eb3890>]}
+[0m13:25:25.261963 [debug] [MainThread]: Flushing usage events
+[0m13:25:59.310393 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72b3ef4522d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72b3ef2f3d90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72b3ef3e93d0>]}
+
+
+============================== 13:25:59.316665 | 19a0411a-de9e-417c-af17-cddada7717c1 ==============================
+[0m13:25:59.316665 [info ] [MainThread]: Running with dbt=1.8.8
+[0m13:25:59.318300 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'version_check': 'True', 'log_path': '/usr/app/logs', 'profiles_dir': '/usr/app', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt run', 'static_parser': 'True', 'log_format': 'default', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m13:25:59.425892 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '19a0411a-de9e-417c-af17-cddada7717c1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72b3ee34e450>]}
+[0m13:25:59.459989 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '19a0411a-de9e-417c-af17-cddada7717c1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72b3f0f295d0>]}
+[0m13:25:59.461559 [info ] [MainThread]: Registered adapter: postgres=1.8.2
+[0m13:25:59.474727 [debug] [MainThread]: checksum: ec53e341a936509427e16df1c646386a84befec52c1957e3f4359fbc36fc93f5, vars: {}, profile: , target: , version: 1.8.8
+[0m13:25:59.487598 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m13:25:59.489996 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '19a0411a-de9e-417c-af17-cddada7717c1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72b3ef2f4cd0>]}
+[0m13:26:00.435063 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '19a0411a-de9e-417c-af17-cddada7717c1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72b3ee371750>]}
+[0m13:26:00.587594 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '19a0411a-de9e-417c-af17-cddada7717c1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72b3ed700ed0>]}
+[0m13:26:00.589403 [info ] [MainThread]: Found 10 models, 5 sources, 423 macros
+[0m13:26:00.591405 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '19a0411a-de9e-417c-af17-cddada7717c1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72b3ed71a250>]}
+[0m13:26:00.595962 [info ] [MainThread]: 
+[0m13:26:00.598279 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m13:26:00.603007 [debug] [ThreadPool]: Acquiring new postgres connection 'list_autoparts_dwh'
+[0m13:26:00.627381 [debug] [ThreadPool]: Using postgres connection "list_autoparts_dwh"
+[0m13:26:00.629366 [debug] [ThreadPool]: On list_autoparts_dwh: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "autoparts_dbt", "target_name": "dev", "connection_name": "list_autoparts_dwh"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m13:26:00.631090 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:26:00.639306 [debug] [ThreadPool]: SQL status: SELECT 5 in 0.008 seconds
+[0m13:26:00.641655 [debug] [ThreadPool]: On list_autoparts_dwh: Close
+[0m13:26:00.643799 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_autoparts_dwh, now create_autoparts_dwh_analytics)
+[0m13:26:00.645560 [debug] [ThreadPool]: Creating schema "database: "autoparts_dwh"
+schema: "analytics"
+"
+[0m13:26:00.650054 [debug] [ThreadPool]: Using postgres connection "create_autoparts_dwh_analytics"
+[0m13:26:00.651502 [debug] [ThreadPool]: On create_autoparts_dwh_analytics: BEGIN
+[0m13:26:00.652920 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m13:26:00.659260 [debug] [ThreadPool]: SQL status: BEGIN in 0.006 seconds
+[0m13:26:00.661516 [debug] [ThreadPool]: Using postgres connection "create_autoparts_dwh_analytics"
+[0m13:26:00.664676 [debug] [ThreadPool]: On create_autoparts_dwh_analytics: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "autoparts_dbt", "target_name": "dev", "connection_name": "create_autoparts_dwh_analytics"} */
+create schema if not exists "analytics"
+[0m13:26:00.667036 [debug] [ThreadPool]: SQL status: CREATE SCHEMA in 0.001 seconds
+[0m13:26:00.668810 [debug] [ThreadPool]: On create_autoparts_dwh_analytics: COMMIT
+[0m13:26:00.670030 [debug] [ThreadPool]: Using postgres connection "create_autoparts_dwh_analytics"
+[0m13:26:00.671276 [debug] [ThreadPool]: On create_autoparts_dwh_analytics: COMMIT
+[0m13:26:00.675378 [debug] [ThreadPool]: SQL status: COMMIT in 0.001 seconds
+[0m13:26:00.678478 [debug] [ThreadPool]: On create_autoparts_dwh_analytics: Close
+[0m13:26:00.681139 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_autoparts_dwh_analytics, now list_autoparts_dwh_analytics)
+[0m13:26:00.688046 [debug] [ThreadPool]: Using postgres connection "list_autoparts_dwh_analytics"
+[0m13:26:00.689535 [debug] [ThreadPool]: On list_autoparts_dwh_analytics: BEGIN
+[0m13:26:00.690712 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m13:26:00.699343 [debug] [ThreadPool]: SQL status: BEGIN in 0.009 seconds
+[0m13:26:00.700639 [debug] [ThreadPool]: Using postgres connection "list_autoparts_dwh_analytics"
+[0m13:26:00.701588 [debug] [ThreadPool]: On list_autoparts_dwh_analytics: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "autoparts_dbt", "target_name": "dev", "connection_name": "list_autoparts_dwh_analytics"} */
+select
+      'autoparts_dwh' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'analytics'
+    union all
+    select
+      'autoparts_dwh' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'analytics'
+    union all
+    select
+      'autoparts_dwh' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'analytics'
+  
+[0m13:26:00.706982 [debug] [ThreadPool]: SQL status: SELECT 0 in 0.004 seconds
+[0m13:26:00.708792 [debug] [ThreadPool]: On list_autoparts_dwh_analytics: ROLLBACK
+[0m13:26:00.709986 [debug] [ThreadPool]: On list_autoparts_dwh_analytics: Close
+[0m13:26:00.713868 [debug] [MainThread]: Using postgres connection "master"
+[0m13:26:00.715103 [debug] [MainThread]: On master: BEGIN
+[0m13:26:00.716035 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m13:26:00.721763 [debug] [MainThread]: SQL status: BEGIN in 0.006 seconds
+[0m13:26:00.723653 [debug] [MainThread]: Using postgres connection "master"
+[0m13:26:00.724768 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "autoparts_dbt", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m13:26:00.729109 [debug] [MainThread]: SQL status: SELECT 0 in 0.003 seconds
+[0m13:26:00.730863 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '19a0411a-de9e-417c-af17-cddada7717c1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72b3ed3ff210>]}
+[0m13:26:00.732083 [debug] [MainThread]: On master: ROLLBACK
+[0m13:26:00.734429 [debug] [MainThread]: Using postgres connection "master"
+[0m13:26:00.735410 [debug] [MainThread]: On master: BEGIN
+[0m13:26:00.736514 [debug] [MainThread]: SQL status: BEGIN in 0.000 seconds
+[0m13:26:00.737498 [debug] [MainThread]: On master: COMMIT
+[0m13:26:00.738744 [debug] [MainThread]: Using postgres connection "master"
+[0m13:26:00.739722 [debug] [MainThread]: On master: COMMIT
+[0m13:26:00.740755 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m13:26:00.741640 [debug] [MainThread]: On master: Close
+[0m13:26:00.742844 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m13:26:00.744406 [info ] [MainThread]: 
+[0m13:26:00.751385 [debug] [Thread-1 (]: Began running node model.autoparts_dbt.stg_car_owners
+[0m13:26:00.751724 [debug] [Thread-2 (]: Began running node model.autoparts_dbt.stg_manufacturers
+[0m13:26:00.752007 [debug] [Thread-3 (]: Began running node model.autoparts_dbt.stg_parts
+[0m13:26:00.752294 [debug] [Thread-4 (]: Began running node model.autoparts_dbt.stg_returns
+[0m13:26:00.756044 [info ] [Thread-1 (]: 1 of 10 START sql view model analytics.stg_car_owners .......................... [RUN]
+[0m13:26:00.758835 [info ] [Thread-2 (]: 2 of 10 START sql view model analytics.stg_manufacturers ....................... [RUN]
+[0m13:26:00.763489 [info ] [Thread-3 (]: 3 of 10 START sql view model analytics.stg_parts ............................... [RUN]
+[0m13:26:00.766867 [info ] [Thread-4 (]: 4 of 10 START sql view model analytics.stg_returns ............................. [RUN]
+[0m13:26:00.770835 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_autoparts_dwh_analytics, now model.autoparts_dbt.stg_car_owners)
+[0m13:26:00.775148 [debug] [Thread-2 (]: Acquiring new postgres connection 'model.autoparts_dbt.stg_manufacturers'
+[0m13:26:00.777075 [debug] [Thread-3 (]: Acquiring new postgres connection 'model.autoparts_dbt.stg_parts'
+[0m13:26:00.779126 [debug] [Thread-4 (]: Acquiring new postgres connection 'model.autoparts_dbt.stg_returns'
+[0m13:26:00.780944 [debug] [Thread-1 (]: Began compiling node model.autoparts_dbt.stg_car_owners
+[0m13:26:00.784856 [debug] [Thread-2 (]: Began compiling node model.autoparts_dbt.stg_manufacturers
+[0m13:26:00.787298 [debug] [Thread-3 (]: Began compiling node model.autoparts_dbt.stg_parts
+[0m13:26:00.789505 [debug] [Thread-4 (]: Began compiling node model.autoparts_dbt.stg_returns
+[0m13:26:00.795748 [debug] [Thread-1 (]: Writing injected SQL for node "model.autoparts_dbt.stg_car_owners"
+[0m13:26:00.798924 [debug] [Thread-2 (]: Writing injected SQL for node "model.autoparts_dbt.stg_manufacturers"
+[0m13:26:00.803512 [debug] [Thread-3 (]: Writing injected SQL for node "model.autoparts_dbt.stg_parts"
+[0m13:26:00.806763 [debug] [Thread-4 (]: Writing injected SQL for node "model.autoparts_dbt.stg_returns"
+[0m13:26:00.828796 [debug] [Thread-1 (]: Began executing node model.autoparts_dbt.stg_car_owners
+[0m13:26:00.836735 [debug] [Thread-3 (]: Began executing node model.autoparts_dbt.stg_parts
+[0m13:26:00.852427 [debug] [Thread-1 (]: Writing runtime sql for node "model.autoparts_dbt.stg_car_owners"
+[0m13:26:00.854778 [debug] [Thread-3 (]: Writing runtime sql for node "model.autoparts_dbt.stg_parts"
+[0m13:26:00.855173 [debug] [Thread-2 (]: Began executing node model.autoparts_dbt.stg_manufacturers
+[0m13:26:00.856300 [debug] [Thread-4 (]: Began executing node model.autoparts_dbt.stg_returns
+[0m13:26:00.861942 [debug] [Thread-2 (]: Writing runtime sql for node "model.autoparts_dbt.stg_manufacturers"
+[0m13:26:00.866485 [debug] [Thread-4 (]: Writing runtime sql for node "model.autoparts_dbt.stg_returns"
+[0m13:26:00.878204 [debug] [Thread-4 (]: Using postgres connection "model.autoparts_dbt.stg_returns"
+[0m13:26:00.880361 [debug] [Thread-4 (]: On model.autoparts_dbt.stg_returns: BEGIN
+[0m13:26:00.880798 [debug] [Thread-3 (]: Using postgres connection "model.autoparts_dbt.stg_parts"
+[0m13:26:00.886250 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m13:26:00.887553 [debug] [Thread-2 (]: Using postgres connection "model.autoparts_dbt.stg_manufacturers"
+[0m13:26:00.888817 [debug] [Thread-3 (]: On model.autoparts_dbt.stg_parts: BEGIN
+[0m13:26:00.890738 [debug] [Thread-1 (]: Using postgres connection "model.autoparts_dbt.stg_car_owners"
+[0m13:26:00.893055 [debug] [Thread-2 (]: On model.autoparts_dbt.stg_manufacturers: BEGIN
+[0m13:26:00.896046 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m13:26:00.896356 [debug] [Thread-4 (]: SQL status: BEGIN in 0.010 seconds
+[0m13:26:00.897996 [debug] [Thread-1 (]: On model.autoparts_dbt.stg_car_owners: BEGIN
+[0m13:26:00.899671 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m13:26:00.902333 [debug] [Thread-4 (]: Using postgres connection "model.autoparts_dbt.stg_returns"
+[0m13:26:00.903869 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m13:26:00.906167 [debug] [Thread-3 (]: SQL status: BEGIN in 0.010 seconds
+[0m13:26:00.906502 [debug] [Thread-4 (]: On model.autoparts_dbt.stg_returns: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "autoparts_dbt", "target_name": "dev", "node_id": "model.autoparts_dbt.stg_returns"} */
+
+  create view "autoparts_dwh"."analytics"."stg_returns__dbt_tmp"
+    
+    
+  as (
+    with source as (
+    select * from "autoparts_dwh"."raw"."returns"
+)
+
+select
+    return_id,
+    sale_id,
+    owner_id,
+    part_id,
+    cast(return_date as timestamp) as returned_at,
+    quantity,
+    cast(refund_amount as numeric(12, 2)) as refund_amount,
+    reason,
+    -- Обробка пропущених коментарів
+    coalesce(comment, 'Коментар відсутній') as comment
+from source
+  );
+[0m13:26:00.908938 [debug] [Thread-3 (]: Using postgres connection "model.autoparts_dbt.stg_parts"
+[0m13:26:00.910186 [debug] [Thread-2 (]: SQL status: BEGIN in 0.010 seconds
+[0m13:26:00.912142 [debug] [Thread-3 (]: On model.autoparts_dbt.stg_parts: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "autoparts_dbt", "target_name": "dev", "node_id": "model.autoparts_dbt.stg_parts"} */
+
+  create view "autoparts_dwh"."analytics"."stg_parts__dbt_tmp"
+    
+    
+  as (
+    with source as (
+    select * from "autoparts_dwh"."raw"."parts"
+)
+
+select
+    part_id,
+    manufacturer_id,
+    part_name,
+    category,
+    cast(price as numeric(12, 2)) as price,
+    cast(is_active as boolean) as is_active
+from source
+-- Очищення: ціна не може бути від'ємною
+where price >= 0
+  );
+[0m13:26:00.912502 [debug] [Thread-1 (]: SQL status: BEGIN in 0.009 seconds
+[0m13:26:00.913755 [debug] [Thread-2 (]: Using postgres connection "model.autoparts_dbt.stg_manufacturers"
+[0m13:26:00.914016 [debug] [Thread-4 (]: SQL status: CREATE VIEW in 0.003 seconds
+[0m13:26:00.916206 [debug] [Thread-1 (]: Using postgres connection "model.autoparts_dbt.stg_car_owners"
+[0m13:26:00.916883 [debug] [Thread-3 (]: SQL status: CREATE VIEW in 0.002 seconds
+[0m13:26:00.917542 [debug] [Thread-2 (]: On model.autoparts_dbt.stg_manufacturers: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "autoparts_dbt", "target_name": "dev", "node_id": "model.autoparts_dbt.stg_manufacturers"} */
+
+  create view "autoparts_dwh"."analytics"."stg_manufacturers__dbt_tmp"
+    
+    
+  as (
+    with source as (
+    select * from "autoparts_dwh"."raw"."manufacturers"
+)
+
+select
+    manufacturer_id,
+    manufacturer_name,
+    country as manufacturer_country
+from source
+  );
+[0m13:26:00.922516 [debug] [Thread-4 (]: Using postgres connection "model.autoparts_dbt.stg_returns"
+[0m13:26:00.924415 [debug] [Thread-1 (]: On model.autoparts_dbt.stg_car_owners: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "autoparts_dbt", "target_name": "dev", "node_id": "model.autoparts_dbt.stg_car_owners"} */
+
+  create view "autoparts_dwh"."analytics"."stg_car_owners__dbt_tmp"
+    
+    
+  as (
+    with source as (
+    select * from "autoparts_dwh"."raw"."car_owners"
+),
+
+-- У raw-шарі є дублікати власників: залишаємо по одному рядку на owner_id
+deduplicated as (
+    select
+        *,
+        row_number() over (
+            partition by owner_id
+            order by registration_date desc
+        ) as row_num
+    from source
+),
+
+renamed_and_cleaned as (
+    select
+        owner_id,
+        full_name,
+        -- Обробка пропущених email-ів
+        coalesce(email, 'unknown@example.com') as email,
+        phone,
+        city,
+        car_brand,
+        cast(car_year as integer) as car_year,
+        cast(registration_date as date) as registration_date
+    from deduplicated
+    where row_num = 1
+)
+
+select * from renamed_and_cleaned
+  );
+[0m13:26:00.927692 [debug] [Thread-3 (]: Using postgres connection "model.autoparts_dbt.stg_parts"
+[0m13:26:00.930062 [debug] [Thread-2 (]: SQL status: CREATE VIEW in 0.001 seconds
+[0m13:26:00.930321 [debug] [Thread-4 (]: On model.autoparts_dbt.stg_returns: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "autoparts_dbt", "target_name": "dev", "node_id": "model.autoparts_dbt.stg_returns"} */
+alter table "autoparts_dwh"."analytics"."stg_returns__dbt_tmp" rename to "stg_returns"
+[0m13:26:00.932993 [debug] [Thread-3 (]: On model.autoparts_dbt.stg_parts: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "autoparts_dbt", "target_name": "dev", "node_id": "model.autoparts_dbt.stg_parts"} */
+alter table "autoparts_dwh"."analytics"."stg_parts__dbt_tmp" rename to "stg_parts"
+[0m13:26:00.933579 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.002 seconds
+[0m13:26:00.936219 [debug] [Thread-2 (]: Using postgres connection "model.autoparts_dbt.stg_manufacturers"
+[0m13:26:00.938037 [debug] [Thread-4 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m13:26:00.939064 [debug] [Thread-3 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m13:26:00.942169 [debug] [Thread-1 (]: Using postgres connection "model.autoparts_dbt.stg_car_owners"
+[0m13:26:00.943483 [debug] [Thread-2 (]: On model.autoparts_dbt.stg_manufacturers: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "autoparts_dbt", "target_name": "dev", "node_id": "model.autoparts_dbt.stg_manufacturers"} */
+alter table "autoparts_dwh"."analytics"."stg_manufacturers__dbt_tmp" rename to "stg_manufacturers"
+[0m13:26:00.952954 [debug] [Thread-4 (]: On model.autoparts_dbt.stg_returns: COMMIT
+[0m13:26:00.954548 [debug] [Thread-3 (]: On model.autoparts_dbt.stg_parts: COMMIT
+[0m13:26:00.956463 [debug] [Thread-1 (]: On model.autoparts_dbt.stg_car_owners: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "autoparts_dbt", "target_name": "dev", "node_id": "model.autoparts_dbt.stg_car_owners"} */
+alter table "autoparts_dwh"."analytics"."stg_car_owners__dbt_tmp" rename to "stg_car_owners"
+[0m13:26:00.957883 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m13:26:00.958497 [debug] [Thread-4 (]: Using postgres connection "model.autoparts_dbt.stg_returns"
+[0m13:26:00.959564 [debug] [Thread-3 (]: Using postgres connection "model.autoparts_dbt.stg_parts"
+[0m13:26:00.960905 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m13:26:00.962271 [debug] [Thread-2 (]: On model.autoparts_dbt.stg_manufacturers: COMMIT
+[0m13:26:00.963748 [debug] [Thread-4 (]: On model.autoparts_dbt.stg_returns: COMMIT
+[0m13:26:00.964708 [debug] [Thread-3 (]: On model.autoparts_dbt.stg_parts: COMMIT
+[0m13:26:00.966263 [debug] [Thread-1 (]: On model.autoparts_dbt.stg_car_owners: COMMIT
+[0m13:26:00.967217 [debug] [Thread-2 (]: Using postgres connection "model.autoparts_dbt.stg_manufacturers"
+[0m13:26:00.969107 [debug] [Thread-4 (]: SQL status: COMMIT in 0.001 seconds
+[0m13:26:00.969663 [debug] [Thread-3 (]: SQL status: COMMIT in 0.001 seconds
+[0m13:26:00.969990 [debug] [Thread-1 (]: Using postgres connection "model.autoparts_dbt.stg_car_owners"
+[0m13:26:00.971015 [debug] [Thread-2 (]: On model.autoparts_dbt.stg_manufacturers: COMMIT
+[0m13:26:00.975618 [debug] [Thread-4 (]: Applying DROP to: "autoparts_dwh"."analytics"."stg_returns__dbt_backup"
+[0m13:26:00.978127 [debug] [Thread-3 (]: Applying DROP to: "autoparts_dwh"."analytics"."stg_parts__dbt_backup"
+[0m13:26:00.979241 [debug] [Thread-1 (]: On model.autoparts_dbt.stg_car_owners: COMMIT
+[0m13:26:00.985207 [debug] [Thread-4 (]: Using postgres connection "model.autoparts_dbt.stg_returns"
+[0m13:26:00.985670 [debug] [Thread-2 (]: SQL status: COMMIT in 0.006 seconds
+[0m13:26:00.986846 [debug] [Thread-3 (]: Using postgres connection "model.autoparts_dbt.stg_parts"
+[0m13:26:00.988700 [debug] [Thread-4 (]: On model.autoparts_dbt.stg_returns: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "autoparts_dbt", "target_name": "dev", "node_id": "model.autoparts_dbt.stg_returns"} */
+drop view if exists "autoparts_dwh"."analytics"."stg_returns__dbt_backup" cascade
+[0m13:26:00.988982 [debug] [Thread-1 (]: SQL status: COMMIT in 0.001 seconds
+[0m13:26:00.990782 [debug] [Thread-2 (]: Applying DROP to: "autoparts_dwh"."analytics"."stg_manufacturers__dbt_backup"
+[0m13:26:00.992032 [debug] [Thread-3 (]: On model.autoparts_dbt.stg_parts: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "autoparts_dbt", "target_name": "dev", "node_id": "model.autoparts_dbt.stg_parts"} */
+drop view if exists "autoparts_dwh"."analytics"."stg_parts__dbt_backup" cascade
+[0m13:26:00.993535 [debug] [Thread-4 (]: SQL status: DROP VIEW in 0.000 seconds
+[0m13:26:00.995393 [debug] [Thread-1 (]: Applying DROP to: "autoparts_dwh"."analytics"."stg_car_owners__dbt_backup"
+[0m13:26:00.996690 [debug] [Thread-2 (]: Using postgres connection "model.autoparts_dbt.stg_manufacturers"
+[0m13:26:00.998013 [debug] [Thread-3 (]: SQL status: DROP VIEW in 0.000 seconds
+[0m13:26:00.999995 [debug] [Thread-4 (]: On model.autoparts_dbt.stg_returns: Close
+[0m13:26:01.001253 [debug] [Thread-1 (]: Using postgres connection "model.autoparts_dbt.stg_car_owners"
+[0m13:26:01.003655 [debug] [Thread-2 (]: On model.autoparts_dbt.stg_manufacturers: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "autoparts_dbt", "target_name": "dev", "node_id": "model.autoparts_dbt.stg_manufacturers"} */
+drop view if exists "autoparts_dwh"."analytics"."stg_manufacturers__dbt_backup" cascade
+[0m13:26:01.005387 [debug] [Thread-3 (]: On model.autoparts_dbt.stg_parts: Close
+[0m13:26:01.007290 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '19a0411a-de9e-417c-af17-cddada7717c1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72b3efc65510>]}
+[0m13:26:01.008216 [debug] [Thread-1 (]: On model.autoparts_dbt.stg_car_owners: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "autoparts_dbt", "target_name": "dev", "node_id": "model.autoparts_dbt.stg_car_owners"} */
+drop view if exists "autoparts_dwh"."analytics"."stg_car_owners__dbt_backup" cascade
+[0m13:26:01.009468 [debug] [Thread-2 (]: SQL status: DROP VIEW in 0.000 seconds
+[0m13:26:01.010514 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '19a0411a-de9e-417c-af17-cddada7717c1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72b3ee34e150>]}
+[0m13:26:01.011546 [info ] [Thread-4 (]: 4 of 10 OK created sql view model analytics.stg_returns ........................ [[32mCREATE VIEW[0m in 0.23s]
+[0m13:26:01.015065 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.000 seconds
+[0m13:26:01.016571 [debug] [Thread-2 (]: On model.autoparts_dbt.stg_manufacturers: Close
+[0m13:26:01.019205 [info ] [Thread-3 (]: 3 of 10 OK created sql view model analytics.stg_parts .......................... [[32mCREATE VIEW[0m in 0.23s]
+[0m13:26:01.020838 [debug] [Thread-4 (]: Finished running node model.autoparts_dbt.stg_returns
+[0m13:26:01.024952 [debug] [Thread-1 (]: On model.autoparts_dbt.stg_car_owners: Close
+[0m13:26:01.027405 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '19a0411a-de9e-417c-af17-cddada7717c1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72b3ecb12b90>]}
+[0m13:26:01.028869 [debug] [Thread-3 (]: Finished running node model.autoparts_dbt.stg_parts
+[0m13:26:01.030133 [debug] [Thread-4 (]: Began running node model.autoparts_dbt.stg_sales
+[0m13:26:01.032161 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '19a0411a-de9e-417c-af17-cddada7717c1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72b3ecfb3ad0>]}
+[0m13:26:01.035223 [info ] [Thread-2 (]: 2 of 10 OK created sql view model analytics.stg_manufacturers .................. [[32mCREATE VIEW[0m in 0.25s]
+[0m13:26:01.038698 [info ] [Thread-4 (]: 5 of 10 START sql view model analytics.stg_sales ............................... [RUN]
+[0m13:26:01.040454 [info ] [Thread-1 (]: 1 of 10 OK created sql view model analytics.stg_car_owners ..................... [[32mCREATE VIEW[0m in 0.26s]
+[0m13:26:01.042318 [debug] [Thread-2 (]: Finished running node model.autoparts_dbt.stg_manufacturers
+[0m13:26:01.043920 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly model.autoparts_dbt.stg_returns, now model.autoparts_dbt.stg_sales)
+[0m13:26:01.045458 [debug] [Thread-1 (]: Finished running node model.autoparts_dbt.stg_car_owners
+[0m13:26:01.047675 [debug] [Thread-3 (]: Began running node model.autoparts_dbt.dim_manufacturers
+[0m13:26:01.048102 [debug] [Thread-2 (]: Began running node model.autoparts_dbt.dim_parts
+[0m13:26:01.049589 [debug] [Thread-4 (]: Began compiling node model.autoparts_dbt.stg_sales
+[0m13:26:01.051162 [debug] [Thread-1 (]: Began running node model.autoparts_dbt.dim_car_owners
+[0m13:26:01.052766 [info ] [Thread-3 (]: 6 of 10 START sql table model analytics.dim_manufacturers ...................... [RUN]
+[0m13:26:01.054647 [info ] [Thread-2 (]: 7 of 10 START sql table model analytics.dim_parts .............................. [RUN]
+[0m13:26:01.057646 [debug] [Thread-4 (]: Writing injected SQL for node "model.autoparts_dbt.stg_sales"
+[0m13:26:01.059142 [info ] [Thread-1 (]: 8 of 10 START sql table model analytics.dim_car_owners ......................... [RUN]
+[0m13:26:01.060609 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.autoparts_dbt.stg_parts, now model.autoparts_dbt.dim_manufacturers)
+[0m13:26:01.062612 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.autoparts_dbt.stg_manufacturers, now model.autoparts_dbt.dim_parts)
+[0m13:26:01.067239 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.autoparts_dbt.stg_car_owners, now model.autoparts_dbt.dim_car_owners)
+[0m13:26:01.068630 [debug] [Thread-3 (]: Began compiling node model.autoparts_dbt.dim_manufacturers
+[0m13:26:01.069973 [debug] [Thread-2 (]: Began compiling node model.autoparts_dbt.dim_parts
+[0m13:26:01.071452 [debug] [Thread-1 (]: Began compiling node model.autoparts_dbt.dim_car_owners
+[0m13:26:01.075271 [debug] [Thread-3 (]: Writing injected SQL for node "model.autoparts_dbt.dim_manufacturers"
+[0m13:26:01.079175 [debug] [Thread-2 (]: Writing injected SQL for node "model.autoparts_dbt.dim_parts"
+[0m13:26:01.079715 [debug] [Thread-4 (]: Began executing node model.autoparts_dbt.stg_sales
+[0m13:26:01.086018 [debug] [Thread-1 (]: Writing injected SQL for node "model.autoparts_dbt.dim_car_owners"
+[0m13:26:01.099691 [debug] [Thread-4 (]: Writing runtime sql for node "model.autoparts_dbt.stg_sales"
+[0m13:26:01.108741 [debug] [Thread-3 (]: Began executing node model.autoparts_dbt.dim_manufacturers
+[0m13:26:01.126298 [debug] [Thread-2 (]: Began executing node model.autoparts_dbt.dim_parts
+[0m13:26:01.132026 [debug] [Thread-3 (]: Writing runtime sql for node "model.autoparts_dbt.dim_manufacturers"
+[0m13:26:01.135954 [debug] [Thread-2 (]: Writing runtime sql for node "model.autoparts_dbt.dim_parts"
+[0m13:26:01.136387 [debug] [Thread-1 (]: Began executing node model.autoparts_dbt.dim_car_owners
+[0m13:26:01.136695 [debug] [Thread-4 (]: Using postgres connection "model.autoparts_dbt.stg_sales"
+[0m13:26:01.142945 [debug] [Thread-1 (]: Writing runtime sql for node "model.autoparts_dbt.dim_car_owners"
+[0m13:26:01.144707 [debug] [Thread-4 (]: On model.autoparts_dbt.stg_sales: BEGIN
+[0m13:26:01.147278 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m13:26:01.151810 [debug] [Thread-2 (]: Using postgres connection "model.autoparts_dbt.dim_parts"
+[0m13:26:01.153939 [debug] [Thread-4 (]: SQL status: BEGIN in 0.007 seconds
+[0m13:26:01.154287 [debug] [Thread-2 (]: On model.autoparts_dbt.dim_parts: BEGIN
+[0m13:26:01.154577 [debug] [Thread-1 (]: Using postgres connection "model.autoparts_dbt.dim_car_owners"
+[0m13:26:01.156266 [debug] [Thread-4 (]: Using postgres connection "model.autoparts_dbt.stg_sales"
+[0m13:26:01.156834 [debug] [Thread-3 (]: Using postgres connection "model.autoparts_dbt.dim_manufacturers"
+[0m13:26:01.158241 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m13:26:01.159915 [debug] [Thread-1 (]: On model.autoparts_dbt.dim_car_owners: BEGIN
+[0m13:26:01.161428 [debug] [Thread-4 (]: On model.autoparts_dbt.stg_sales: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "autoparts_dbt", "target_name": "dev", "node_id": "model.autoparts_dbt.stg_sales"} */
+
+  create view "autoparts_dwh"."analytics"."stg_sales__dbt_tmp"
+    
+    
+  as (
+    with source as (
+    select * from "autoparts_dwh"."raw"."sales"
+)
+
+select
+    sale_id,
+    owner_id,
+    part_id,
+    cast(sale_date as timestamp) as sold_at,
+    quantity,
+    cast(unit_price as numeric(12, 2)) as unit_price,
+    payment_method
+from source
+where quantity > 0
+  );
+[0m13:26:01.163918 [debug] [Thread-3 (]: On model.autoparts_dbt.dim_manufacturers: BEGIN
+[0m13:26:01.166559 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m13:26:01.168938 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m13:26:01.169236 [debug] [Thread-4 (]: SQL status: CREATE VIEW in 0.001 seconds
+[0m13:26:01.169886 [debug] [Thread-2 (]: SQL status: BEGIN in 0.012 seconds
+[0m13:26:01.176011 [debug] [Thread-4 (]: Using postgres connection "model.autoparts_dbt.stg_sales"
+[0m13:26:01.176606 [debug] [Thread-1 (]: SQL status: BEGIN in 0.010 seconds
+[0m13:26:01.177149 [debug] [Thread-3 (]: SQL status: BEGIN in 0.008 seconds
+[0m13:26:01.178026 [debug] [Thread-2 (]: Using postgres connection "model.autoparts_dbt.dim_parts"
+[0m13:26:01.179363 [debug] [Thread-4 (]: On model.autoparts_dbt.stg_sales: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "autoparts_dbt", "target_name": "dev", "node_id": "model.autoparts_dbt.stg_sales"} */
+alter table "autoparts_dwh"."analytics"."stg_sales__dbt_tmp" rename to "stg_sales"
+[0m13:26:01.180635 [debug] [Thread-1 (]: Using postgres connection "model.autoparts_dbt.dim_car_owners"
+[0m13:26:01.181762 [debug] [Thread-3 (]: Using postgres connection "model.autoparts_dbt.dim_manufacturers"
+[0m13:26:01.183117 [debug] [Thread-2 (]: On model.autoparts_dbt.dim_parts: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "autoparts_dbt", "target_name": "dev", "node_id": "model.autoparts_dbt.dim_parts"} */
+
+  
+    
+
+  create  table "autoparts_dwh"."analytics"."dim_parts__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+with stg_parts as (
+    select * from "autoparts_dwh"."analytics"."stg_parts"
+),
+
+stg_manufacturers as (
+    select * from "autoparts_dwh"."analytics"."stg_manufacturers"
+)
+
+select
+    p.part_id,
+    p.part_name,
+    p.category,
+    p.price,
+    p.is_active,
+    p.manufacturer_id,
+    m.manufacturer_name,
+    m.manufacturer_country
+from stg_parts p
+left join stg_manufacturers m on p.manufacturer_id = m.manufacturer_id
+  );
+  
+[0m13:26:01.184881 [debug] [Thread-4 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m13:26:01.185550 [debug] [Thread-1 (]: On model.autoparts_dbt.dim_car_owners: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "autoparts_dbt", "target_name": "dev", "node_id": "model.autoparts_dbt.dim_car_owners"} */
+
+  
+    
+
+  create  table "autoparts_dwh"."analytics"."dim_car_owners__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+select
+    owner_id,
+    full_name,
+    email,
+    phone,
+    city,
+    car_brand,
+    car_year,
+    registration_date
+from "autoparts_dwh"."analytics"."stg_car_owners"
+  );
+  
+[0m13:26:01.186845 [debug] [Thread-3 (]: On model.autoparts_dbt.dim_manufacturers: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "autoparts_dbt", "target_name": "dev", "node_id": "model.autoparts_dbt.dim_manufacturers"} */
+
+  
+    
+
+  create  table "autoparts_dwh"."analytics"."dim_manufacturers__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+select
+    manufacturer_id,
+    manufacturer_name,
+    manufacturer_country
+from "autoparts_dwh"."analytics"."stg_manufacturers"
+  );
+  
+[0m13:26:01.190266 [debug] [Thread-4 (]: On model.autoparts_dbt.stg_sales: COMMIT
+[0m13:26:01.191402 [debug] [Thread-2 (]: SQL status: SELECT 150 in 0.003 seconds
+[0m13:26:01.194135 [debug] [Thread-4 (]: Using postgres connection "model.autoparts_dbt.stg_sales"
+[0m13:26:01.197241 [debug] [Thread-2 (]: Using postgres connection "model.autoparts_dbt.dim_parts"
+[0m13:26:01.197556 [debug] [Thread-1 (]: SQL status: SELECT 600 in 0.006 seconds
+[0m13:26:01.197815 [debug] [Thread-3 (]: SQL status: SELECT 12 in 0.005 seconds
+[0m13:26:01.198784 [debug] [Thread-4 (]: On model.autoparts_dbt.stg_sales: COMMIT
+[0m13:26:01.199966 [debug] [Thread-2 (]: On model.autoparts_dbt.dim_parts: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "autoparts_dbt", "target_name": "dev", "node_id": "model.autoparts_dbt.dim_parts"} */
+alter table "autoparts_dwh"."analytics"."dim_parts__dbt_tmp" rename to "dim_parts"
+[0m13:26:01.202648 [debug] [Thread-1 (]: Using postgres connection "model.autoparts_dbt.dim_car_owners"
+[0m13:26:01.207339 [debug] [Thread-3 (]: Using postgres connection "model.autoparts_dbt.dim_manufacturers"
+[0m13:26:01.209847 [debug] [Thread-4 (]: SQL status: COMMIT in 0.001 seconds
+[0m13:26:01.210297 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m13:26:01.211328 [debug] [Thread-1 (]: On model.autoparts_dbt.dim_car_owners: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "autoparts_dbt", "target_name": "dev", "node_id": "model.autoparts_dbt.dim_car_owners"} */
+alter table "autoparts_dwh"."analytics"."dim_car_owners__dbt_tmp" rename to "dim_car_owners"
+[0m13:26:01.215011 [debug] [Thread-3 (]: On model.autoparts_dbt.dim_manufacturers: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "autoparts_dbt", "target_name": "dev", "node_id": "model.autoparts_dbt.dim_manufacturers"} */
+alter table "autoparts_dwh"."analytics"."dim_manufacturers__dbt_tmp" rename to "dim_manufacturers"
+[0m13:26:01.217455 [debug] [Thread-4 (]: Applying DROP to: "autoparts_dwh"."analytics"."stg_sales__dbt_backup"
+[0m13:26:01.221511 [debug] [Thread-2 (]: On model.autoparts_dbt.dim_parts: COMMIT
+[0m13:26:01.224773 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m13:26:01.227632 [debug] [Thread-3 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m13:26:01.228871 [debug] [Thread-4 (]: Using postgres connection "model.autoparts_dbt.stg_sales"
+[0m13:26:01.230214 [debug] [Thread-2 (]: Using postgres connection "model.autoparts_dbt.dim_parts"
+[0m13:26:01.232153 [debug] [Thread-1 (]: On model.autoparts_dbt.dim_car_owners: COMMIT
+[0m13:26:01.235411 [debug] [Thread-3 (]: On model.autoparts_dbt.dim_manufacturers: COMMIT
+[0m13:26:01.236825 [debug] [Thread-4 (]: On model.autoparts_dbt.stg_sales: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "autoparts_dbt", "target_name": "dev", "node_id": "model.autoparts_dbt.stg_sales"} */
+drop view if exists "autoparts_dwh"."analytics"."stg_sales__dbt_backup" cascade
+[0m13:26:01.238188 [debug] [Thread-2 (]: On model.autoparts_dbt.dim_parts: COMMIT
+[0m13:26:01.239379 [debug] [Thread-1 (]: Using postgres connection "model.autoparts_dbt.dim_car_owners"
+[0m13:26:01.240435 [debug] [Thread-3 (]: Using postgres connection "model.autoparts_dbt.dim_manufacturers"
+[0m13:26:01.241846 [debug] [Thread-4 (]: SQL status: DROP VIEW in 0.000 seconds
+[0m13:26:01.243635 [debug] [Thread-1 (]: On model.autoparts_dbt.dim_car_owners: COMMIT
+[0m13:26:01.243922 [debug] [Thread-2 (]: SQL status: COMMIT in 0.001 seconds
+[0m13:26:01.244886 [debug] [Thread-3 (]: On model.autoparts_dbt.dim_manufacturers: COMMIT
+[0m13:26:01.246403 [debug] [Thread-4 (]: On model.autoparts_dbt.stg_sales: Close
+[0m13:26:01.249345 [debug] [Thread-2 (]: Applying DROP to: "autoparts_dwh"."analytics"."dim_parts__dbt_backup"
+[0m13:26:01.249637 [debug] [Thread-1 (]: SQL status: COMMIT in 0.002 seconds
+[0m13:26:01.251711 [debug] [Thread-3 (]: SQL status: COMMIT in 0.001 seconds
+[0m13:26:01.252265 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '19a0411a-de9e-417c-af17-cddada7717c1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72b3ecbc2cd0>]}
+[0m13:26:01.256000 [debug] [Thread-2 (]: Using postgres connection "model.autoparts_dbt.dim_parts"
+[0m13:26:01.258304 [debug] [Thread-1 (]: Applying DROP to: "autoparts_dwh"."analytics"."dim_car_owners__dbt_backup"
+[0m13:26:01.260452 [debug] [Thread-3 (]: Applying DROP to: "autoparts_dwh"."analytics"."dim_manufacturers__dbt_backup"
+[0m13:26:01.261652 [info ] [Thread-4 (]: 5 of 10 OK created sql view model analytics.stg_sales .......................... [[32mCREATE VIEW[0m in 0.21s]
+[0m13:26:01.264746 [debug] [Thread-2 (]: On model.autoparts_dbt.dim_parts: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "autoparts_dbt", "target_name": "dev", "node_id": "model.autoparts_dbt.dim_parts"} */
+drop table if exists "autoparts_dwh"."analytics"."dim_parts__dbt_backup" cascade
+[0m13:26:01.266330 [debug] [Thread-1 (]: Using postgres connection "model.autoparts_dbt.dim_car_owners"
+[0m13:26:01.267551 [debug] [Thread-3 (]: Using postgres connection "model.autoparts_dbt.dim_manufacturers"
+[0m13:26:01.268601 [debug] [Thread-4 (]: Finished running node model.autoparts_dbt.stg_sales
+[0m13:26:01.269882 [debug] [Thread-2 (]: SQL status: DROP TABLE in 0.000 seconds
+[0m13:26:01.270473 [debug] [Thread-1 (]: On model.autoparts_dbt.dim_car_owners: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "autoparts_dbt", "target_name": "dev", "node_id": "model.autoparts_dbt.dim_car_owners"} */
+drop table if exists "autoparts_dwh"."analytics"."dim_car_owners__dbt_backup" cascade
+[0m13:26:01.271360 [debug] [Thread-3 (]: On model.autoparts_dbt.dim_manufacturers: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "autoparts_dbt", "target_name": "dev", "node_id": "model.autoparts_dbt.dim_manufacturers"} */
+drop table if exists "autoparts_dwh"."analytics"."dim_manufacturers__dbt_backup" cascade
+[0m13:26:01.272748 [debug] [Thread-4 (]: Began running node model.autoparts_dbt.fct_returns
+[0m13:26:01.274279 [debug] [Thread-2 (]: On model.autoparts_dbt.dim_parts: Close
+[0m13:26:01.275564 [debug] [Thread-1 (]: SQL status: DROP TABLE in 0.000 seconds
+[0m13:26:01.276426 [debug] [Thread-3 (]: SQL status: DROP TABLE in 0.000 seconds
+[0m13:26:01.277351 [info ] [Thread-4 (]: 9 of 10 START sql table model analytics.fct_returns ............................ [RUN]
+[0m13:26:01.278842 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '19a0411a-de9e-417c-af17-cddada7717c1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72b3edb08ed0>]}
+[0m13:26:01.281203 [debug] [Thread-1 (]: On model.autoparts_dbt.dim_car_owners: Close
+[0m13:26:01.285609 [debug] [Thread-3 (]: On model.autoparts_dbt.dim_manufacturers: Close
+[0m13:26:01.287315 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly model.autoparts_dbt.stg_sales, now model.autoparts_dbt.fct_returns)
+[0m13:26:01.289580 [info ] [Thread-2 (]: 7 of 10 OK created sql table model analytics.dim_parts ......................... [[32mSELECT 150[0m in 0.22s]
+[0m13:26:01.291387 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '19a0411a-de9e-417c-af17-cddada7717c1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72b3ecf85210>]}
+[0m13:26:01.293636 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '19a0411a-de9e-417c-af17-cddada7717c1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72b3ecf84910>]}
+[0m13:26:01.294811 [debug] [Thread-4 (]: Began compiling node model.autoparts_dbt.fct_returns
+[0m13:26:01.296215 [debug] [Thread-2 (]: Finished running node model.autoparts_dbt.dim_parts
+[0m13:26:01.299191 [info ] [Thread-1 (]: 8 of 10 OK created sql table model analytics.dim_car_owners .................... [[32mSELECT 600[0m in 0.22s]
+[0m13:26:01.301011 [info ] [Thread-3 (]: 6 of 10 OK created sql table model analytics.dim_manufacturers ................. [[32mSELECT 12[0m in 0.23s]
+[0m13:26:01.304707 [debug] [Thread-4 (]: Writing injected SQL for node "model.autoparts_dbt.fct_returns"
+[0m13:26:01.306519 [debug] [Thread-2 (]: Began running node model.autoparts_dbt.fct_sales
+[0m13:26:01.307938 [debug] [Thread-1 (]: Finished running node model.autoparts_dbt.dim_car_owners
+[0m13:26:01.309283 [debug] [Thread-3 (]: Finished running node model.autoparts_dbt.dim_manufacturers
+[0m13:26:01.313460 [info ] [Thread-2 (]: 10 of 10 START sql table model analytics.fct_sales ............................. [RUN]
+[0m13:26:01.317936 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.autoparts_dbt.dim_parts, now model.autoparts_dbt.fct_sales)
+[0m13:26:01.319272 [debug] [Thread-2 (]: Began compiling node model.autoparts_dbt.fct_sales
+[0m13:26:01.323238 [debug] [Thread-2 (]: Writing injected SQL for node "model.autoparts_dbt.fct_sales"
+[0m13:26:01.324629 [debug] [Thread-4 (]: Began executing node model.autoparts_dbt.fct_returns
+[0m13:26:01.328353 [debug] [Thread-4 (]: Writing runtime sql for node "model.autoparts_dbt.fct_returns"
+[0m13:26:01.337877 [debug] [Thread-2 (]: Began executing node model.autoparts_dbt.fct_sales
+[0m13:26:01.342461 [debug] [Thread-2 (]: Writing runtime sql for node "model.autoparts_dbt.fct_sales"
+[0m13:26:01.346893 [debug] [Thread-4 (]: Using postgres connection "model.autoparts_dbt.fct_returns"
+[0m13:26:01.350037 [debug] [Thread-4 (]: On model.autoparts_dbt.fct_returns: BEGIN
+[0m13:26:01.351764 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m13:26:01.358460 [debug] [Thread-2 (]: Using postgres connection "model.autoparts_dbt.fct_sales"
+[0m13:26:01.359259 [debug] [Thread-4 (]: SQL status: BEGIN in 0.007 seconds
+[0m13:26:01.360644 [debug] [Thread-2 (]: On model.autoparts_dbt.fct_sales: BEGIN
+[0m13:26:01.362305 [debug] [Thread-4 (]: Using postgres connection "model.autoparts_dbt.fct_returns"
+[0m13:26:01.364097 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m13:26:01.365574 [debug] [Thread-4 (]: On model.autoparts_dbt.fct_returns: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "autoparts_dbt", "target_name": "dev", "node_id": "model.autoparts_dbt.fct_returns"} */
+
+  
+    
+
+  create  table "autoparts_dwh"."analytics"."fct_returns__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+with stg_returns as (
+    select * from "autoparts_dwh"."analytics"."stg_returns"
+),
+
+stg_sales as (
+    select * from "autoparts_dwh"."analytics"."stg_sales"
+)
+
+select
+    r.return_id,
+    r.sale_id,
+    r.owner_id,
+    r.part_id,
+    r.returned_at,
+    r.quantity,
+    r.refund_amount,
+    r.reason,
+    r.comment
+from stg_returns r
+-- Data Integrity: повернення має відповідати існуючому продажу
+join stg_sales s on r.sale_id = s.sale_id
+  );
+  
+[0m13:26:01.371990 [debug] [Thread-2 (]: SQL status: BEGIN in 0.008 seconds
+[0m13:26:01.373744 [debug] [Thread-2 (]: Using postgres connection "model.autoparts_dbt.fct_sales"
+[0m13:26:01.374085 [debug] [Thread-4 (]: SQL status: SELECT 400 in 0.006 seconds
+[0m13:26:01.375747 [debug] [Thread-2 (]: On model.autoparts_dbt.fct_sales: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "autoparts_dbt", "target_name": "dev", "node_id": "model.autoparts_dbt.fct_sales"} */
+
+  
+    
+
+  create  table "autoparts_dwh"."analytics"."fct_sales__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+with stg_sales as (
+    select * from "autoparts_dwh"."analytics"."stg_sales"
+),
+
+stg_car_owners as (
+    select * from "autoparts_dwh"."analytics"."stg_car_owners"
+),
+
+stg_parts as (
+    select * from "autoparts_dwh"."analytics"."stg_parts"
+)
+
+select
+    s.sale_id,
+    s.owner_id,
+    s.part_id,
+    p.manufacturer_id,
+    s.sold_at,
+    s.quantity,
+    s.unit_price,
+    -- Сума продажу = кількість * ціна на момент продажу
+    s.quantity * s.unit_price as total_amount,
+    s.payment_method
+from stg_sales s
+-- Data Integrity: беремо лише продажі з існуючими власниками та запчастинами
+join stg_car_owners o on s.owner_id = o.owner_id
+join stg_parts p on s.part_id = p.part_id
+  );
+  
+[0m13:26:01.378677 [debug] [Thread-4 (]: Using postgres connection "model.autoparts_dbt.fct_returns"
+[0m13:26:01.381094 [debug] [Thread-4 (]: On model.autoparts_dbt.fct_returns: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "autoparts_dbt", "target_name": "dev", "node_id": "model.autoparts_dbt.fct_returns"} */
+alter table "autoparts_dwh"."analytics"."fct_returns__dbt_tmp" rename to "fct_returns"
+[0m13:26:01.382990 [debug] [Thread-4 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m13:26:01.385052 [debug] [Thread-4 (]: On model.autoparts_dbt.fct_returns: COMMIT
+[0m13:26:01.386446 [debug] [Thread-4 (]: Using postgres connection "model.autoparts_dbt.fct_returns"
+[0m13:26:01.387646 [debug] [Thread-4 (]: On model.autoparts_dbt.fct_returns: COMMIT
+[0m13:26:01.389893 [debug] [Thread-4 (]: SQL status: COMMIT in 0.001 seconds
+[0m13:26:01.392343 [debug] [Thread-4 (]: Applying DROP to: "autoparts_dwh"."analytics"."fct_returns__dbt_backup"
+[0m13:26:01.393767 [debug] [Thread-4 (]: Using postgres connection "model.autoparts_dbt.fct_returns"
+[0m13:26:01.394792 [debug] [Thread-4 (]: On model.autoparts_dbt.fct_returns: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "autoparts_dbt", "target_name": "dev", "node_id": "model.autoparts_dbt.fct_returns"} */
+drop table if exists "autoparts_dwh"."analytics"."fct_returns__dbt_backup" cascade
+[0m13:26:01.395969 [debug] [Thread-4 (]: SQL status: DROP TABLE in 0.000 seconds
+[0m13:26:01.397556 [debug] [Thread-4 (]: On model.autoparts_dbt.fct_returns: Close
+[0m13:26:01.398656 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '19a0411a-de9e-417c-af17-cddada7717c1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72b3efc65510>]}
+[0m13:26:01.399812 [info ] [Thread-4 (]: 9 of 10 OK created sql table model analytics.fct_returns ....................... [[32mSELECT 400[0m in 0.11s]
+[0m13:26:01.401264 [debug] [Thread-4 (]: Finished running node model.autoparts_dbt.fct_returns
+[0m13:26:01.440973 [debug] [Thread-2 (]: SQL status: SELECT 5000 in 0.061 seconds
+[0m13:26:01.444294 [debug] [Thread-2 (]: Using postgres connection "model.autoparts_dbt.fct_sales"
+[0m13:26:01.445382 [debug] [Thread-2 (]: On model.autoparts_dbt.fct_sales: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "autoparts_dbt", "target_name": "dev", "node_id": "model.autoparts_dbt.fct_sales"} */
+alter table "autoparts_dwh"."analytics"."fct_sales__dbt_tmp" rename to "fct_sales"
+[0m13:26:01.446715 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m13:26:01.448245 [debug] [Thread-2 (]: On model.autoparts_dbt.fct_sales: COMMIT
+[0m13:26:01.449277 [debug] [Thread-2 (]: Using postgres connection "model.autoparts_dbt.fct_sales"
+[0m13:26:01.450243 [debug] [Thread-2 (]: On model.autoparts_dbt.fct_sales: COMMIT
+[0m13:26:01.453125 [debug] [Thread-2 (]: SQL status: COMMIT in 0.002 seconds
+[0m13:26:01.455602 [debug] [Thread-2 (]: Applying DROP to: "autoparts_dwh"."analytics"."fct_sales__dbt_backup"
+[0m13:26:01.456797 [debug] [Thread-2 (]: Using postgres connection "model.autoparts_dbt.fct_sales"
+[0m13:26:01.457673 [debug] [Thread-2 (]: On model.autoparts_dbt.fct_sales: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "autoparts_dbt", "target_name": "dev", "node_id": "model.autoparts_dbt.fct_sales"} */
+drop table if exists "autoparts_dwh"."analytics"."fct_sales__dbt_backup" cascade
+[0m13:26:01.458854 [debug] [Thread-2 (]: SQL status: DROP TABLE in 0.000 seconds
+[0m13:26:01.460455 [debug] [Thread-2 (]: On model.autoparts_dbt.fct_sales: Close
+[0m13:26:01.461611 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '19a0411a-de9e-417c-af17-cddada7717c1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72b3ec1341d0>]}
+[0m13:26:01.463346 [info ] [Thread-2 (]: 10 of 10 OK created sql table model analytics.fct_sales ........................ [[32mSELECT 5000[0m in 0.14s]
+[0m13:26:01.464810 [debug] [Thread-2 (]: Finished running node model.autoparts_dbt.fct_sales
+[0m13:26:01.466936 [debug] [MainThread]: Using postgres connection "master"
+[0m13:26:01.468150 [debug] [MainThread]: On master: BEGIN
+[0m13:26:01.469146 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m13:26:01.475017 [debug] [MainThread]: SQL status: BEGIN in 0.006 seconds
+[0m13:26:01.476284 [debug] [MainThread]: On master: COMMIT
+[0m13:26:01.477229 [debug] [MainThread]: Using postgres connection "master"
+[0m13:26:01.478215 [debug] [MainThread]: On master: COMMIT
+[0m13:26:01.479280 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m13:26:01.480234 [debug] [MainThread]: On master: Close
+[0m13:26:01.481303 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m13:26:01.483064 [debug] [MainThread]: Connection 'model.autoparts_dbt.dim_car_owners' was properly closed.
+[0m13:26:01.485783 [debug] [MainThread]: Connection 'model.autoparts_dbt.fct_sales' was properly closed.
+[0m13:26:01.487482 [debug] [MainThread]: Connection 'model.autoparts_dbt.dim_manufacturers' was properly closed.
+[0m13:26:01.488561 [debug] [MainThread]: Connection 'model.autoparts_dbt.fct_returns' was properly closed.
+[0m13:26:01.490751 [info ] [MainThread]: 
+[0m13:26:01.492427 [info ] [MainThread]: Finished running 5 view models, 5 table models in 0 hours 0 minutes and 0.89 seconds (0.89s).
+[0m13:26:01.494701 [debug] [MainThread]: Command end result
+[0m13:26:01.554786 [info ] [MainThread]: 
+[0m13:26:01.556207 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m13:26:01.557534 [info ] [MainThread]: 
+[0m13:26:01.558804 [info ] [MainThread]: Done. PASS=10 WARN=0 ERROR=0 SKIP=0 TOTAL=10
+[0m13:26:01.560574 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 2.3072083, "process_user_time": 1.997866, "process_kernel_time": 0.278033, "process_mem_max_rss": "116800", "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m13:26:01.564869 [debug] [MainThread]: Command `dbt run` succeeded at 13:26:01.564726 after 2.31 seconds
+[0m13:26:01.568299 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72b3ef2f67d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72b3ef441fd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72b3ef442450>]}
+[0m13:26:01.569410 [debug] [MainThread]: Flushing usage events
+[0m17:15:27.010477 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a764b9048d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a764b904950>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a764b9040d0>]}
+
+
+============================== 17:15:27.016582 | 004a6a73-d003-4409-866e-4346e4e61008 ==============================
+[0m17:15:27.016582 [info ] [MainThread]: Running with dbt=1.8.8
+[0m17:15:27.018219 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'fail_fast': 'False', 'log_path': '/usr/app/logs', 'profiles_dir': '/usr/app', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'target_path': 'None', 'invocation_command': 'dbt debug', 'send_anonymous_usage_stats': 'True'}
+[0m17:15:27.032094 [info ] [MainThread]: dbt version: 1.8.8
+[0m17:15:27.033409 [info ] [MainThread]: python version: 3.11.17
+[0m17:15:27.036876 [info ] [MainThread]: python path: /usr/local/bin/python3.11
+[0m17:15:27.039221 [info ] [MainThread]: os info: Linux-6.18.54.1-microsoft-standard-WSL2-x86_64-with-glibc2.41
+[0m17:15:27.120873 [info ] [MainThread]: Using profiles dir at /usr/app
+[0m17:15:27.123704 [info ] [MainThread]: Using profiles.yml file at /usr/app/profiles.yml
+[0m17:15:27.125369 [info ] [MainThread]: Using dbt_project.yml file at /usr/app/dbt_project.yml
+[0m17:15:27.128432 [info ] [MainThread]: adapter type: postgres
+[0m17:15:27.130776 [info ] [MainThread]: adapter version: 1.8.2
+[0m17:15:27.193781 [info ] [MainThread]: Configuration:
+[0m17:15:27.195669 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m17:15:27.197358 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m17:15:27.199394 [info ] [MainThread]: Required dependencies:
+[0m17:15:27.201033 [debug] [MainThread]: Executing "git --help"
+[0m17:15:27.204385 [info ] [MainThread]:  - git [[31mERROR[0m]
+
+[0m17:15:27.206764 [info ] [MainThread]: Connection:
+[0m17:15:27.210825 [info ] [MainThread]:   host: dwh_postgres
+[0m17:15:27.213915 [info ] [MainThread]:   port: 5432
+[0m17:15:27.219347 [info ] [MainThread]:   user: admin
+[0m17:15:27.222648 [info ] [MainThread]:   database: autoparts_dwh
+[0m17:15:27.232243 [info ] [MainThread]:   schema: analytics
+[0m17:15:27.236159 [info ] [MainThread]:   connect_timeout: 10
+[0m17:15:27.237970 [info ] [MainThread]:   role: None
+[0m17:15:27.242302 [info ] [MainThread]:   search_path: None
+[0m17:15:27.244415 [info ] [MainThread]:   keepalives_idle: 0
+[0m17:15:27.246857 [info ] [MainThread]:   sslmode: None
+[0m17:15:27.249582 [info ] [MainThread]:   sslcert: None
+[0m17:15:27.251822 [info ] [MainThread]:   sslkey: None
+[0m17:15:27.254605 [info ] [MainThread]:   sslrootcert: None
+[0m17:15:27.256842 [info ] [MainThread]:   application_name: dbt
+[0m17:15:27.262974 [info ] [MainThread]:   retries: 1
+[0m17:15:27.267114 [info ] [MainThread]: Registered adapter: postgres=1.8.2
+[0m17:15:27.277752 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m17:15:27.311313 [debug] [MainThread]: Using postgres connection "debug"
+[0m17:15:27.312929 [debug] [MainThread]: On debug: select 1 as id
+[0m17:15:27.314440 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m17:15:27.324111 [debug] [MainThread]: SQL status: SELECT 1 in 0.010 seconds
+[0m17:15:27.326137 [debug] [MainThread]: On debug: Close
+[0m17:15:27.327534 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m17:15:27.329455 [info ] [MainThread]: [31m1 check failed:[0m
+[0m17:15:27.332330 [info ] [MainThread]: Error from git --help: Could not find command, ensure it is in the user's PATH: "git"
+
+[0m17:15:27.334850 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_wall_clock_time": 0.37781295, "process_user_time": 0.973688, "process_kernel_time": 0.28894, "process_mem_max_rss": "107032", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m17:15:27.336821 [debug] [MainThread]: Command `dbt debug` failed at 17:15:27.336685 after 0.38 seconds
+[0m17:15:27.339328 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m17:15:27.341170 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a764b90b490>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a764b8856d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a764fcfc590>]}
+[0m17:15:27.343472 [debug] [MainThread]: Flushing usage events
+[0m17:15:35.995359 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7da1c5c72790>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7da1c5da23d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7da1c5c5b950>]}
+
+
+============================== 17:15:36.008189 | 2d7fa4e0-37d8-41c0-8d66-fe161d907e09 ==============================
+[0m17:15:36.008189 [info ] [MainThread]: Running with dbt=1.8.8
+[0m17:15:36.012367 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'profiles_dir': '/usr/app', 'log_path': '/usr/app/logs', 'version_check': 'True', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'invocation_command': 'dbt run', 'static_parser': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m17:15:36.127689 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '2d7fa4e0-37d8-41c0-8d66-fe161d907e09', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7da1c5c78e90>]}
+[0m17:15:36.166179 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '2d7fa4e0-37d8-41c0-8d66-fe161d907e09', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7da1c7879410>]}
+[0m17:15:36.168322 [info ] [MainThread]: Registered adapter: postgres=1.8.2
+[0m17:15:36.178554 [debug] [MainThread]: checksum: ec53e341a936509427e16df1c646386a84befec52c1957e3f4359fbc36fc93f5, vars: {}, profile: , target: , version: 1.8.8
+[0m17:15:36.614566 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m17:15:36.616383 [debug] [MainThread]: Partial parsing: updated file: autoparts_dbt://models/staging/stg_parts.sql
+[0m17:15:36.799331 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '2d7fa4e0-37d8-41c0-8d66-fe161d907e09', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7da1c5c4edd0>]}
+[0m17:15:36.907230 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '2d7fa4e0-37d8-41c0-8d66-fe161d907e09', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7da1c47b0c90>]}
+[0m17:15:36.908596 [info ] [MainThread]: Found 10 models, 5 sources, 423 macros
+[0m17:15:36.910830 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '2d7fa4e0-37d8-41c0-8d66-fe161d907e09', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7da1c5d92a10>]}
+[0m17:15:36.921610 [info ] [MainThread]: 
+[0m17:15:36.924390 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m17:15:36.929280 [debug] [ThreadPool]: Acquiring new postgres connection 'list_autoparts_dwh'
+[0m17:15:36.954409 [debug] [ThreadPool]: Using postgres connection "list_autoparts_dwh"
+[0m17:15:36.956513 [debug] [ThreadPool]: On list_autoparts_dwh: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "autoparts_dbt", "target_name": "dev", "connection_name": "list_autoparts_dwh"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m17:15:36.958128 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:15:36.967991 [debug] [ThreadPool]: SQL status: SELECT 6 in 0.010 seconds
+[0m17:15:36.970606 [debug] [ThreadPool]: On list_autoparts_dwh: Close
+[0m17:15:36.974287 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_autoparts_dwh, now list_autoparts_dwh_analytics)
+[0m17:15:36.979765 [debug] [ThreadPool]: Using postgres connection "list_autoparts_dwh_analytics"
+[0m17:15:36.982329 [debug] [ThreadPool]: On list_autoparts_dwh_analytics: BEGIN
+[0m17:15:36.984257 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m17:15:36.992167 [debug] [ThreadPool]: SQL status: BEGIN in 0.008 seconds
+[0m17:15:36.993950 [debug] [ThreadPool]: Using postgres connection "list_autoparts_dwh_analytics"
+[0m17:15:36.995650 [debug] [ThreadPool]: On list_autoparts_dwh_analytics: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "autoparts_dbt", "target_name": "dev", "connection_name": "list_autoparts_dwh_analytics"} */
+select
+      'autoparts_dwh' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'analytics'
+    union all
+    select
+      'autoparts_dwh' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'analytics'
+    union all
+    select
+      'autoparts_dwh' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'analytics'
+  
+[0m17:15:37.002164 [debug] [ThreadPool]: SQL status: SELECT 10 in 0.004 seconds
+[0m17:15:37.004907 [debug] [ThreadPool]: On list_autoparts_dwh_analytics: ROLLBACK
+[0m17:15:37.006878 [debug] [ThreadPool]: On list_autoparts_dwh_analytics: Close
+[0m17:15:37.012145 [debug] [MainThread]: Using postgres connection "master"
+[0m17:15:37.014489 [debug] [MainThread]: On master: BEGIN
+[0m17:15:37.016387 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m17:15:37.022856 [debug] [MainThread]: SQL status: BEGIN in 0.006 seconds
+[0m17:15:37.024731 [debug] [MainThread]: Using postgres connection "master"
+[0m17:15:37.026579 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "autoparts_dbt", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m17:15:37.033406 [debug] [MainThread]: SQL status: SELECT 5 in 0.005 seconds
+[0m17:15:37.036122 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '2d7fa4e0-37d8-41c0-8d66-fe161d907e09', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7da1c3790190>]}
+[0m17:15:37.040217 [debug] [MainThread]: On master: ROLLBACK
+[0m17:15:37.042208 [debug] [MainThread]: Using postgres connection "master"
+[0m17:15:37.045886 [debug] [MainThread]: On master: BEGIN
+[0m17:15:37.047725 [debug] [MainThread]: SQL status: BEGIN in 0.000 seconds
+[0m17:15:37.049148 [debug] [MainThread]: On master: COMMIT
+[0m17:15:37.052455 [debug] [MainThread]: Using postgres connection "master"
+[0m17:15:37.054193 [debug] [MainThread]: On master: COMMIT
+[0m17:15:37.055889 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m17:15:37.061128 [debug] [MainThread]: On master: Close
+[0m17:15:37.063429 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m17:15:37.066799 [info ] [MainThread]: 
+[0m17:15:37.077306 [debug] [Thread-1 (]: Began running node model.autoparts_dbt.stg_car_owners
+[0m17:15:37.077894 [debug] [Thread-2 (]: Began running node model.autoparts_dbt.stg_manufacturers
+[0m17:15:37.078203 [debug] [Thread-3 (]: Began running node model.autoparts_dbt.stg_parts
+[0m17:15:37.078470 [debug] [Thread-4 (]: Began running node model.autoparts_dbt.stg_returns
+[0m17:15:37.080024 [info ] [Thread-1 (]: 1 of 10 START sql view model analytics.stg_car_owners .......................... [RUN]
+[0m17:15:37.082414 [info ] [Thread-2 (]: 2 of 10 START sql view model analytics.stg_manufacturers ....................... [RUN]
+[0m17:15:37.084800 [info ] [Thread-3 (]: 3 of 10 START sql view model analytics.stg_parts ............................... [RUN]
+[0m17:15:37.087113 [info ] [Thread-4 (]: 4 of 10 START sql view model analytics.stg_returns ............................. [RUN]
+[0m17:15:37.089870 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_autoparts_dwh_analytics, now model.autoparts_dbt.stg_car_owners)
+[0m17:15:37.092688 [debug] [Thread-2 (]: Acquiring new postgres connection 'model.autoparts_dbt.stg_manufacturers'
+[0m17:15:37.094822 [debug] [Thread-3 (]: Acquiring new postgres connection 'model.autoparts_dbt.stg_parts'
+[0m17:15:37.096991 [debug] [Thread-4 (]: Acquiring new postgres connection 'model.autoparts_dbt.stg_returns'
+[0m17:15:37.098718 [debug] [Thread-1 (]: Began compiling node model.autoparts_dbt.stg_car_owners
+[0m17:15:37.101145 [debug] [Thread-2 (]: Began compiling node model.autoparts_dbt.stg_manufacturers
+[0m17:15:37.103013 [debug] [Thread-3 (]: Began compiling node model.autoparts_dbt.stg_parts
+[0m17:15:37.104966 [debug] [Thread-4 (]: Began compiling node model.autoparts_dbt.stg_returns
+[0m17:15:37.111902 [debug] [Thread-1 (]: Writing injected SQL for node "model.autoparts_dbt.stg_car_owners"
+[0m17:15:37.116068 [debug] [Thread-2 (]: Writing injected SQL for node "model.autoparts_dbt.stg_manufacturers"
+[0m17:15:37.119893 [debug] [Thread-3 (]: Writing injected SQL for node "model.autoparts_dbt.stg_parts"
+[0m17:15:37.124079 [debug] [Thread-4 (]: Writing injected SQL for node "model.autoparts_dbt.stg_returns"
+[0m17:15:37.134089 [debug] [Thread-1 (]: Began executing node model.autoparts_dbt.stg_car_owners
+[0m17:15:37.137725 [debug] [Thread-3 (]: Began executing node model.autoparts_dbt.stg_parts
+[0m17:15:37.138259 [debug] [Thread-2 (]: Began executing node model.autoparts_dbt.stg_manufacturers
+[0m17:15:37.152719 [debug] [Thread-4 (]: Began executing node model.autoparts_dbt.stg_returns
+[0m17:15:37.162755 [debug] [Thread-1 (]: Writing runtime sql for node "model.autoparts_dbt.stg_car_owners"
+[0m17:15:37.165030 [debug] [Thread-3 (]: Writing runtime sql for node "model.autoparts_dbt.stg_parts"
+[0m17:15:37.168875 [debug] [Thread-2 (]: Writing runtime sql for node "model.autoparts_dbt.stg_manufacturers"
+[0m17:15:37.172854 [debug] [Thread-4 (]: Writing runtime sql for node "model.autoparts_dbt.stg_returns"
+[0m17:15:37.184193 [debug] [Thread-3 (]: Using postgres connection "model.autoparts_dbt.stg_parts"
+[0m17:15:37.186004 [debug] [Thread-1 (]: Using postgres connection "model.autoparts_dbt.stg_car_owners"
+[0m17:15:37.186519 [debug] [Thread-2 (]: Using postgres connection "model.autoparts_dbt.stg_manufacturers"
+[0m17:15:37.187215 [debug] [Thread-3 (]: On model.autoparts_dbt.stg_parts: BEGIN
+[0m17:15:37.195261 [debug] [Thread-1 (]: On model.autoparts_dbt.stg_car_owners: BEGIN
+[0m17:15:37.197270 [debug] [Thread-4 (]: Using postgres connection "model.autoparts_dbt.stg_returns"
+[0m17:15:37.199013 [debug] [Thread-2 (]: On model.autoparts_dbt.stg_manufacturers: BEGIN
+[0m17:15:37.202418 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m17:15:37.205121 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m17:15:37.207641 [debug] [Thread-4 (]: On model.autoparts_dbt.stg_returns: BEGIN
+[0m17:15:37.209398 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m17:15:37.215914 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m17:15:37.218348 [debug] [Thread-3 (]: SQL status: BEGIN in 0.016 seconds
+[0m17:15:37.220141 [debug] [Thread-1 (]: SQL status: BEGIN in 0.015 seconds
+[0m17:15:37.222496 [debug] [Thread-3 (]: Using postgres connection "model.autoparts_dbt.stg_parts"
+[0m17:15:37.223697 [debug] [Thread-2 (]: SQL status: BEGIN in 0.014 seconds
+[0m17:15:37.224718 [debug] [Thread-1 (]: Using postgres connection "model.autoparts_dbt.stg_car_owners"
+[0m17:15:37.225636 [debug] [Thread-4 (]: SQL status: BEGIN in 0.010 seconds
+[0m17:15:37.226610 [debug] [Thread-3 (]: On model.autoparts_dbt.stg_parts: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "autoparts_dbt", "target_name": "dev", "node_id": "model.autoparts_dbt.stg_parts"} */
+
+  create view "autoparts_dwh"."analytics"."stg_parts__dbt_tmp"
+    
+    
+  as (
+    with source as (
+    select * from "autoparts_dwh"."raw"."parts"
+)
+
+select
+    part_id,
+    manufacturer_id,
+    part_name,
+    category,
+    cast(price as numeric(12, 2)) as price,
+    cast(is_active as boolean) as is_active
+from source
+where price >= 0
+  );
+[0m17:15:37.228263 [debug] [Thread-2 (]: Using postgres connection "model.autoparts_dbt.stg_manufacturers"
+[0m17:15:37.230034 [debug] [Thread-1 (]: On model.autoparts_dbt.stg_car_owners: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "autoparts_dbt", "target_name": "dev", "node_id": "model.autoparts_dbt.stg_car_owners"} */
+
+  create view "autoparts_dwh"."analytics"."stg_car_owners__dbt_tmp"
+    
+    
+  as (
+    with source as (
+    select * from "autoparts_dwh"."raw"."car_owners"
+),
+
+-- У raw-шарі є дублікати власників: залишаємо по одному рядку на owner_id
+deduplicated as (
+    select
+        *,
+        row_number() over (
+            partition by owner_id
+            order by registration_date desc
+        ) as row_num
+    from source
+),
+
+renamed_and_cleaned as (
+    select
+        owner_id,
+        full_name,
+        -- Обробка пропущених email-ів
+        coalesce(email, 'unknown@example.com') as email,
+        phone,
+        city,
+        car_brand,
+        cast(car_year as integer) as car_year,
+        cast(registration_date as date) as registration_date
+    from deduplicated
+    where row_num = 1
+)
+
+select * from renamed_and_cleaned
+  );
+[0m17:15:37.231887 [debug] [Thread-4 (]: Using postgres connection "model.autoparts_dbt.stg_returns"
+[0m17:15:37.234682 [debug] [Thread-2 (]: On model.autoparts_dbt.stg_manufacturers: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "autoparts_dbt", "target_name": "dev", "node_id": "model.autoparts_dbt.stg_manufacturers"} */
+
+  create view "autoparts_dwh"."analytics"."stg_manufacturers__dbt_tmp"
+    
+    
+  as (
+    with source as (
+    select * from "autoparts_dwh"."raw"."manufacturers"
+)
+
+select
+    manufacturer_id,
+    manufacturer_name,
+    country as manufacturer_country
+from source
+  );
+[0m17:15:37.237342 [debug] [Thread-4 (]: On model.autoparts_dbt.stg_returns: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "autoparts_dbt", "target_name": "dev", "node_id": "model.autoparts_dbt.stg_returns"} */
+
+  create view "autoparts_dwh"."analytics"."stg_returns__dbt_tmp"
+    
+    
+  as (
+    with source as (
+    select * from "autoparts_dwh"."raw"."returns"
+)
+
+select
+    return_id,
+    sale_id,
+    owner_id,
+    part_id,
+    cast(return_date as timestamp) as returned_at,
+    quantity,
+    cast(refund_amount as numeric(12, 2)) as refund_amount,
+    reason,
+    -- Обробка пропущених коментарів
+    coalesce(comment, 'Коментар відсутній') as comment
+from source
+  );
+[0m17:15:37.238799 [debug] [Thread-3 (]: SQL status: CREATE VIEW in 0.005 seconds
+[0m17:15:37.239306 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.003 seconds
+[0m17:15:37.240277 [debug] [Thread-2 (]: SQL status: CREATE VIEW in 0.001 seconds
+[0m17:15:37.242918 [debug] [Thread-4 (]: SQL status: CREATE VIEW in 0.001 seconds
+[0m17:15:37.247024 [debug] [Thread-3 (]: Using postgres connection "model.autoparts_dbt.stg_parts"
+[0m17:15:37.251741 [debug] [Thread-1 (]: Using postgres connection "model.autoparts_dbt.stg_car_owners"
+[0m17:15:37.256047 [debug] [Thread-2 (]: Using postgres connection "model.autoparts_dbt.stg_manufacturers"
+[0m17:15:37.259504 [debug] [Thread-4 (]: Using postgres connection "model.autoparts_dbt.stg_returns"
+[0m17:15:37.261368 [debug] [Thread-3 (]: On model.autoparts_dbt.stg_parts: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "autoparts_dbt", "target_name": "dev", "node_id": "model.autoparts_dbt.stg_parts"} */
+alter table "autoparts_dwh"."analytics"."stg_parts" rename to "stg_parts__dbt_backup"
+[0m17:15:37.263368 [debug] [Thread-1 (]: On model.autoparts_dbt.stg_car_owners: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "autoparts_dbt", "target_name": "dev", "node_id": "model.autoparts_dbt.stg_car_owners"} */
+alter table "autoparts_dwh"."analytics"."stg_car_owners" rename to "stg_car_owners__dbt_backup"
+[0m17:15:37.265661 [debug] [Thread-2 (]: On model.autoparts_dbt.stg_manufacturers: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "autoparts_dbt", "target_name": "dev", "node_id": "model.autoparts_dbt.stg_manufacturers"} */
+alter table "autoparts_dwh"."analytics"."stg_manufacturers" rename to "stg_manufacturers__dbt_backup"
+[0m17:15:37.267418 [debug] [Thread-4 (]: On model.autoparts_dbt.stg_returns: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "autoparts_dbt", "target_name": "dev", "node_id": "model.autoparts_dbt.stg_returns"} */
+alter table "autoparts_dwh"."analytics"."stg_returns" rename to "stg_returns__dbt_backup"
+[0m17:15:37.270028 [debug] [Thread-3 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m17:15:37.271819 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m17:15:37.273700 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m17:15:37.275730 [debug] [Thread-4 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m17:15:37.278670 [debug] [Thread-3 (]: Using postgres connection "model.autoparts_dbt.stg_parts"
+[0m17:15:37.283115 [debug] [Thread-1 (]: Using postgres connection "model.autoparts_dbt.stg_car_owners"
+[0m17:15:37.287171 [debug] [Thread-2 (]: Using postgres connection "model.autoparts_dbt.stg_manufacturers"
+[0m17:15:37.292503 [debug] [Thread-4 (]: Using postgres connection "model.autoparts_dbt.stg_returns"
+[0m17:15:37.295015 [debug] [Thread-3 (]: On model.autoparts_dbt.stg_parts: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "autoparts_dbt", "target_name": "dev", "node_id": "model.autoparts_dbt.stg_parts"} */
+alter table "autoparts_dwh"."analytics"."stg_parts__dbt_tmp" rename to "stg_parts"
+[0m17:15:37.296891 [debug] [Thread-1 (]: On model.autoparts_dbt.stg_car_owners: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "autoparts_dbt", "target_name": "dev", "node_id": "model.autoparts_dbt.stg_car_owners"} */
+alter table "autoparts_dwh"."analytics"."stg_car_owners__dbt_tmp" rename to "stg_car_owners"
+[0m17:15:37.298686 [debug] [Thread-2 (]: On model.autoparts_dbt.stg_manufacturers: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "autoparts_dbt", "target_name": "dev", "node_id": "model.autoparts_dbt.stg_manufacturers"} */
+alter table "autoparts_dwh"."analytics"."stg_manufacturers__dbt_tmp" rename to "stg_manufacturers"
+[0m17:15:37.300804 [debug] [Thread-4 (]: On model.autoparts_dbt.stg_returns: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "autoparts_dbt", "target_name": "dev", "node_id": "model.autoparts_dbt.stg_returns"} */
+alter table "autoparts_dwh"."analytics"."stg_returns__dbt_tmp" rename to "stg_returns"
+[0m17:15:37.302729 [debug] [Thread-3 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m17:15:37.303786 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m17:15:37.304939 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m17:15:37.306208 [debug] [Thread-4 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m17:15:37.316986 [debug] [Thread-3 (]: On model.autoparts_dbt.stg_parts: COMMIT
+[0m17:15:37.318981 [debug] [Thread-1 (]: On model.autoparts_dbt.stg_car_owners: COMMIT
+[0m17:15:37.321259 [debug] [Thread-2 (]: On model.autoparts_dbt.stg_manufacturers: COMMIT
+[0m17:15:37.323272 [debug] [Thread-4 (]: On model.autoparts_dbt.stg_returns: COMMIT
+[0m17:15:37.324674 [debug] [Thread-3 (]: Using postgres connection "model.autoparts_dbt.stg_parts"
+[0m17:15:37.326196 [debug] [Thread-1 (]: Using postgres connection "model.autoparts_dbt.stg_car_owners"
+[0m17:15:37.327467 [debug] [Thread-2 (]: Using postgres connection "model.autoparts_dbt.stg_manufacturers"
+[0m17:15:37.328659 [debug] [Thread-4 (]: Using postgres connection "model.autoparts_dbt.stg_returns"
+[0m17:15:37.330213 [debug] [Thread-3 (]: On model.autoparts_dbt.stg_parts: COMMIT
+[0m17:15:37.331540 [debug] [Thread-1 (]: On model.autoparts_dbt.stg_car_owners: COMMIT
+[0m17:15:37.332513 [debug] [Thread-2 (]: On model.autoparts_dbt.stg_manufacturers: COMMIT
+[0m17:15:37.333424 [debug] [Thread-4 (]: On model.autoparts_dbt.stg_returns: COMMIT
+[0m17:15:37.335378 [debug] [Thread-3 (]: SQL status: COMMIT in 0.001 seconds
+[0m17:15:37.336030 [debug] [Thread-1 (]: SQL status: COMMIT in 0.001 seconds
+[0m17:15:37.336976 [debug] [Thread-2 (]: SQL status: COMMIT in 0.001 seconds
+[0m17:15:37.337855 [debug] [Thread-4 (]: SQL status: COMMIT in 0.001 seconds
+[0m17:15:37.342030 [debug] [Thread-3 (]: Applying DROP to: "autoparts_dwh"."analytics"."stg_parts__dbt_backup"
+[0m17:15:37.345817 [debug] [Thread-1 (]: Applying DROP to: "autoparts_dwh"."analytics"."stg_car_owners__dbt_backup"
+[0m17:15:37.348646 [debug] [Thread-2 (]: Applying DROP to: "autoparts_dwh"."analytics"."stg_manufacturers__dbt_backup"
+[0m17:15:37.353166 [debug] [Thread-4 (]: Applying DROP to: "autoparts_dwh"."analytics"."stg_returns__dbt_backup"
+[0m17:15:37.358068 [debug] [Thread-3 (]: Using postgres connection "model.autoparts_dbt.stg_parts"
+[0m17:15:37.361662 [debug] [Thread-1 (]: Using postgres connection "model.autoparts_dbt.stg_car_owners"
+[0m17:15:37.363864 [debug] [Thread-2 (]: Using postgres connection "model.autoparts_dbt.stg_manufacturers"
+[0m17:15:37.366158 [debug] [Thread-4 (]: Using postgres connection "model.autoparts_dbt.stg_returns"
+[0m17:15:37.368123 [debug] [Thread-3 (]: On model.autoparts_dbt.stg_parts: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "autoparts_dbt", "target_name": "dev", "node_id": "model.autoparts_dbt.stg_parts"} */
+drop view if exists "autoparts_dwh"."analytics"."stg_parts__dbt_backup" cascade
+[0m17:15:37.371985 [debug] [Thread-1 (]: On model.autoparts_dbt.stg_car_owners: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "autoparts_dbt", "target_name": "dev", "node_id": "model.autoparts_dbt.stg_car_owners"} */
+drop view if exists "autoparts_dwh"."analytics"."stg_car_owners__dbt_backup" cascade
+[0m17:15:37.373972 [debug] [Thread-2 (]: On model.autoparts_dbt.stg_manufacturers: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "autoparts_dbt", "target_name": "dev", "node_id": "model.autoparts_dbt.stg_manufacturers"} */
+drop view if exists "autoparts_dwh"."analytics"."stg_manufacturers__dbt_backup" cascade
+[0m17:15:37.376049 [debug] [Thread-4 (]: On model.autoparts_dbt.stg_returns: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "autoparts_dbt", "target_name": "dev", "node_id": "model.autoparts_dbt.stg_returns"} */
+drop view if exists "autoparts_dwh"."analytics"."stg_returns__dbt_backup" cascade
+[0m17:15:37.380338 [debug] [Thread-3 (]: SQL status: DROP VIEW in 0.002 seconds
+[0m17:15:37.381163 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.001 seconds
+[0m17:15:37.383918 [debug] [Thread-2 (]: SQL status: DROP VIEW in 0.001 seconds
+[0m17:15:37.385512 [debug] [Thread-4 (]: SQL status: DROP VIEW in 0.001 seconds
+[0m17:15:37.387066 [debug] [Thread-3 (]: On model.autoparts_dbt.stg_parts: Close
+[0m17:15:37.390261 [debug] [Thread-1 (]: On model.autoparts_dbt.stg_car_owners: Close
+[0m17:15:37.393153 [debug] [Thread-2 (]: On model.autoparts_dbt.stg_manufacturers: Close
+[0m17:15:37.395357 [debug] [Thread-4 (]: On model.autoparts_dbt.stg_returns: Close
+[0m17:15:37.397681 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '2d7fa4e0-37d8-41c0-8d66-fe161d907e09', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7da1c65b1710>]}
+[0m17:15:37.398639 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '2d7fa4e0-37d8-41c0-8d66-fe161d907e09', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7da1c3785b10>]}
+[0m17:15:37.401633 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '2d7fa4e0-37d8-41c0-8d66-fe161d907e09', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7da1c375cd50>]}
+[0m17:15:37.404345 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '2d7fa4e0-37d8-41c0-8d66-fe161d907e09', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7da1c3746b50>]}
+[0m17:15:37.407445 [info ] [Thread-3 (]: 3 of 10 OK created sql view model analytics.stg_parts .......................... [[32mCREATE VIEW[0m in 0.30s]
+[0m17:15:37.409413 [info ] [Thread-1 (]: 1 of 10 OK created sql view model analytics.stg_car_owners ..................... [[32mCREATE VIEW[0m in 0.31s]
+[0m17:15:37.412211 [info ] [Thread-2 (]: 2 of 10 OK created sql view model analytics.stg_manufacturers .................. [[32mCREATE VIEW[0m in 0.31s]
+[0m17:15:37.414098 [info ] [Thread-4 (]: 4 of 10 OK created sql view model analytics.stg_returns ........................ [[32mCREATE VIEW[0m in 0.31s]
+[0m17:15:37.415992 [debug] [Thread-3 (]: Finished running node model.autoparts_dbt.stg_parts
+[0m17:15:37.419691 [debug] [Thread-1 (]: Finished running node model.autoparts_dbt.stg_car_owners
+[0m17:15:37.421707 [debug] [Thread-2 (]: Finished running node model.autoparts_dbt.stg_manufacturers
+[0m17:15:37.423371 [debug] [Thread-4 (]: Finished running node model.autoparts_dbt.stg_returns
+[0m17:15:37.424755 [debug] [Thread-3 (]: Began running node model.autoparts_dbt.stg_sales
+[0m17:15:37.426415 [debug] [Thread-1 (]: Began running node model.autoparts_dbt.dim_car_owners
+[0m17:15:37.427603 [debug] [Thread-2 (]: Began running node model.autoparts_dbt.dim_manufacturers
+[0m17:15:37.428578 [debug] [Thread-4 (]: Began running node model.autoparts_dbt.dim_parts
+[0m17:15:37.431735 [info ] [Thread-3 (]: 5 of 10 START sql view model analytics.stg_sales ............................... [RUN]
+[0m17:15:37.434263 [info ] [Thread-1 (]: 6 of 10 START sql table model analytics.dim_car_owners ......................... [RUN]
+[0m17:15:37.436098 [info ] [Thread-2 (]: 7 of 10 START sql table model analytics.dim_manufacturers ...................... [RUN]
+[0m17:15:37.437644 [info ] [Thread-4 (]: 8 of 10 START sql table model analytics.dim_parts .............................. [RUN]
+[0m17:15:37.440146 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.autoparts_dbt.stg_parts, now model.autoparts_dbt.stg_sales)
+[0m17:15:37.442846 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.autoparts_dbt.stg_car_owners, now model.autoparts_dbt.dim_car_owners)
+[0m17:15:37.444513 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.autoparts_dbt.stg_manufacturers, now model.autoparts_dbt.dim_manufacturers)
+[0m17:15:37.446148 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly model.autoparts_dbt.stg_returns, now model.autoparts_dbt.dim_parts)
+[0m17:15:37.447626 [debug] [Thread-3 (]: Began compiling node model.autoparts_dbt.stg_sales
+[0m17:15:37.452186 [debug] [Thread-1 (]: Began compiling node model.autoparts_dbt.dim_car_owners
+[0m17:15:37.453564 [debug] [Thread-2 (]: Began compiling node model.autoparts_dbt.dim_manufacturers
+[0m17:15:37.454842 [debug] [Thread-4 (]: Began compiling node model.autoparts_dbt.dim_parts
+[0m17:15:37.458795 [debug] [Thread-3 (]: Writing injected SQL for node "model.autoparts_dbt.stg_sales"
+[0m17:15:37.462472 [debug] [Thread-1 (]: Writing injected SQL for node "model.autoparts_dbt.dim_car_owners"
+[0m17:15:37.504923 [debug] [Thread-2 (]: Writing injected SQL for node "model.autoparts_dbt.dim_manufacturers"
+[0m17:15:37.507354 [debug] [Thread-4 (]: Writing injected SQL for node "model.autoparts_dbt.dim_parts"
+[0m17:15:37.520603 [debug] [Thread-1 (]: Began executing node model.autoparts_dbt.dim_car_owners
+[0m17:15:37.521591 [debug] [Thread-2 (]: Began executing node model.autoparts_dbt.dim_manufacturers
+[0m17:15:37.522141 [debug] [Thread-3 (]: Began executing node model.autoparts_dbt.stg_sales
+[0m17:15:37.529027 [debug] [Thread-4 (]: Began executing node model.autoparts_dbt.dim_parts
+[0m17:15:37.537088 [debug] [Thread-1 (]: Writing runtime sql for node "model.autoparts_dbt.dim_car_owners"
+[0m17:15:37.539966 [debug] [Thread-2 (]: Writing runtime sql for node "model.autoparts_dbt.dim_manufacturers"
+[0m17:15:37.544605 [debug] [Thread-3 (]: Writing runtime sql for node "model.autoparts_dbt.stg_sales"
+[0m17:15:37.548401 [debug] [Thread-4 (]: Writing runtime sql for node "model.autoparts_dbt.dim_parts"
+[0m17:15:37.557334 [debug] [Thread-3 (]: Using postgres connection "model.autoparts_dbt.stg_sales"
+[0m17:15:37.557682 [debug] [Thread-1 (]: Using postgres connection "model.autoparts_dbt.dim_car_owners"
+[0m17:15:37.558347 [debug] [Thread-2 (]: Using postgres connection "model.autoparts_dbt.dim_manufacturers"
+[0m17:15:37.559396 [debug] [Thread-3 (]: On model.autoparts_dbt.stg_sales: BEGIN
+[0m17:15:37.560650 [debug] [Thread-4 (]: Using postgres connection "model.autoparts_dbt.dim_parts"
+[0m17:15:37.561216 [debug] [Thread-1 (]: On model.autoparts_dbt.dim_car_owners: BEGIN
+[0m17:15:37.562821 [debug] [Thread-2 (]: On model.autoparts_dbt.dim_manufacturers: BEGIN
+[0m17:15:37.564752 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m17:15:37.566397 [debug] [Thread-4 (]: On model.autoparts_dbt.dim_parts: BEGIN
+[0m17:15:37.567643 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m17:15:37.568989 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m17:15:37.571966 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m17:15:37.575795 [debug] [Thread-3 (]: SQL status: BEGIN in 0.011 seconds
+[0m17:15:37.578470 [debug] [Thread-3 (]: Using postgres connection "model.autoparts_dbt.stg_sales"
+[0m17:15:37.578891 [debug] [Thread-1 (]: SQL status: BEGIN in 0.011 seconds
+[0m17:15:37.580196 [debug] [Thread-3 (]: On model.autoparts_dbt.stg_sales: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "autoparts_dbt", "target_name": "dev", "node_id": "model.autoparts_dbt.stg_sales"} */
+
+  create view "autoparts_dwh"."analytics"."stg_sales__dbt_tmp"
+    
+    
+  as (
+    with source as (
+    select * from "autoparts_dwh"."raw"."sales"
+)
+
+select
+    sale_id,
+    owner_id,
+    part_id,
+    cast(sale_date as timestamp) as sold_at,
+    quantity,
+    cast(unit_price as numeric(12, 2)) as unit_price,
+    payment_method
+from source
+where quantity > 0
+  );
+[0m17:15:37.580726 [debug] [Thread-2 (]: SQL status: BEGIN in 0.012 seconds
+[0m17:15:37.581807 [debug] [Thread-1 (]: Using postgres connection "model.autoparts_dbt.dim_car_owners"
+[0m17:15:37.582270 [debug] [Thread-4 (]: SQL status: BEGIN in 0.010 seconds
+[0m17:15:37.584380 [debug] [Thread-2 (]: Using postgres connection "model.autoparts_dbt.dim_manufacturers"
+[0m17:15:37.584654 [debug] [Thread-3 (]: SQL status: CREATE VIEW in 0.001 seconds
+[0m17:15:37.585647 [debug] [Thread-1 (]: On model.autoparts_dbt.dim_car_owners: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "autoparts_dbt", "target_name": "dev", "node_id": "model.autoparts_dbt.dim_car_owners"} */
+
+  
+    
+
+  create  table "autoparts_dwh"."analytics"."dim_car_owners__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+select
+    owner_id,
+    full_name,
+    email,
+    phone,
+    city,
+    car_brand,
+    car_year,
+    registration_date
+from "autoparts_dwh"."analytics"."stg_car_owners"
+  );
+  
+[0m17:15:37.586940 [debug] [Thread-4 (]: Using postgres connection "model.autoparts_dbt.dim_parts"
+[0m17:15:37.588270 [debug] [Thread-2 (]: On model.autoparts_dbt.dim_manufacturers: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "autoparts_dbt", "target_name": "dev", "node_id": "model.autoparts_dbt.dim_manufacturers"} */
+
+  
+    
+
+  create  table "autoparts_dwh"."analytics"."dim_manufacturers__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+select
+    manufacturer_id,
+    manufacturer_name,
+    manufacturer_country
+from "autoparts_dwh"."analytics"."stg_manufacturers"
+  );
+  
+[0m17:15:37.591297 [debug] [Thread-3 (]: Using postgres connection "model.autoparts_dbt.stg_sales"
+[0m17:15:37.593771 [debug] [Thread-4 (]: On model.autoparts_dbt.dim_parts: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "autoparts_dbt", "target_name": "dev", "node_id": "model.autoparts_dbt.dim_parts"} */
+
+  
+    
+
+  create  table "autoparts_dwh"."analytics"."dim_parts__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+with stg_parts as (
+    select * from "autoparts_dwh"."analytics"."stg_parts"
+),
+
+stg_manufacturers as (
+    select * from "autoparts_dwh"."analytics"."stg_manufacturers"
+)
+
+select
+    p.part_id,
+    p.part_name,
+    p.category,
+    p.price,
+    p.is_active,
+    p.manufacturer_id,
+    m.manufacturer_name,
+    m.manufacturer_country
+from stg_parts p
+left join stg_manufacturers m on p.manufacturer_id = m.manufacturer_id
+  );
+  
+[0m17:15:37.596470 [debug] [Thread-3 (]: On model.autoparts_dbt.stg_sales: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "autoparts_dbt", "target_name": "dev", "node_id": "model.autoparts_dbt.stg_sales"} */
+alter table "autoparts_dwh"."analytics"."stg_sales" rename to "stg_sales__dbt_backup"
+[0m17:15:37.598424 [debug] [Thread-2 (]: SQL status: SELECT 12 in 0.003 seconds
+[0m17:15:37.599051 [debug] [Thread-1 (]: SQL status: SELECT 600 in 0.006 seconds
+[0m17:15:37.599751 [debug] [Thread-3 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m17:15:37.601755 [debug] [Thread-4 (]: SQL status: SELECT 150 in 0.004 seconds
+[0m17:15:37.607778 [debug] [Thread-2 (]: Using postgres connection "model.autoparts_dbt.dim_manufacturers"
+[0m17:15:37.613166 [debug] [Thread-1 (]: Using postgres connection "model.autoparts_dbt.dim_car_owners"
+[0m17:15:37.617022 [debug] [Thread-3 (]: Using postgres connection "model.autoparts_dbt.stg_sales"
+[0m17:15:37.620007 [debug] [Thread-4 (]: Using postgres connection "model.autoparts_dbt.dim_parts"
+[0m17:15:37.622976 [debug] [Thread-2 (]: On model.autoparts_dbt.dim_manufacturers: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "autoparts_dbt", "target_name": "dev", "node_id": "model.autoparts_dbt.dim_manufacturers"} */
+alter table "autoparts_dwh"."analytics"."dim_manufacturers" rename to "dim_manufacturers__dbt_backup"
+[0m17:15:37.624500 [debug] [Thread-1 (]: On model.autoparts_dbt.dim_car_owners: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "autoparts_dbt", "target_name": "dev", "node_id": "model.autoparts_dbt.dim_car_owners"} */
+alter table "autoparts_dwh"."analytics"."dim_car_owners" rename to "dim_car_owners__dbt_backup"
+[0m17:15:37.625833 [debug] [Thread-3 (]: On model.autoparts_dbt.stg_sales: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "autoparts_dbt", "target_name": "dev", "node_id": "model.autoparts_dbt.stg_sales"} */
+alter table "autoparts_dwh"."analytics"."stg_sales__dbt_tmp" rename to "stg_sales"
+[0m17:15:37.627082 [debug] [Thread-4 (]: On model.autoparts_dbt.dim_parts: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "autoparts_dbt", "target_name": "dev", "node_id": "model.autoparts_dbt.dim_parts"} */
+alter table "autoparts_dwh"."analytics"."dim_parts" rename to "dim_parts__dbt_backup"
+[0m17:15:37.628576 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m17:15:37.632050 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m17:15:37.632992 [debug] [Thread-3 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m17:15:37.634144 [debug] [Thread-4 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m17:15:37.637883 [debug] [Thread-2 (]: Using postgres connection "model.autoparts_dbt.dim_manufacturers"
+[0m17:15:37.640775 [debug] [Thread-1 (]: Using postgres connection "model.autoparts_dbt.dim_car_owners"
+[0m17:15:37.643103 [debug] [Thread-3 (]: On model.autoparts_dbt.stg_sales: COMMIT
+[0m17:15:37.645852 [debug] [Thread-4 (]: Using postgres connection "model.autoparts_dbt.dim_parts"
+[0m17:15:37.651085 [debug] [Thread-2 (]: On model.autoparts_dbt.dim_manufacturers: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "autoparts_dbt", "target_name": "dev", "node_id": "model.autoparts_dbt.dim_manufacturers"} */
+alter table "autoparts_dwh"."analytics"."dim_manufacturers__dbt_tmp" rename to "dim_manufacturers"
+[0m17:15:37.655090 [debug] [Thread-1 (]: On model.autoparts_dbt.dim_car_owners: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "autoparts_dbt", "target_name": "dev", "node_id": "model.autoparts_dbt.dim_car_owners"} */
+alter table "autoparts_dwh"."analytics"."dim_car_owners__dbt_tmp" rename to "dim_car_owners"
+[0m17:15:37.656623 [debug] [Thread-3 (]: Using postgres connection "model.autoparts_dbt.stg_sales"
+[0m17:15:37.662236 [debug] [Thread-4 (]: On model.autoparts_dbt.dim_parts: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "autoparts_dbt", "target_name": "dev", "node_id": "model.autoparts_dbt.dim_parts"} */
+alter table "autoparts_dwh"."analytics"."dim_parts__dbt_tmp" rename to "dim_parts"
+[0m17:15:37.664702 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m17:15:37.666669 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m17:15:37.668755 [debug] [Thread-3 (]: On model.autoparts_dbt.stg_sales: COMMIT
+[0m17:15:37.672496 [debug] [Thread-4 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m17:15:37.676643 [debug] [Thread-2 (]: On model.autoparts_dbt.dim_manufacturers: COMMIT
+[0m17:15:37.679207 [debug] [Thread-1 (]: On model.autoparts_dbt.dim_car_owners: COMMIT
+[0m17:15:37.683458 [debug] [Thread-3 (]: SQL status: COMMIT in 0.002 seconds
+[0m17:15:37.684592 [debug] [Thread-4 (]: On model.autoparts_dbt.dim_parts: COMMIT
+[0m17:15:37.686480 [debug] [Thread-2 (]: Using postgres connection "model.autoparts_dbt.dim_manufacturers"
+[0m17:15:37.688132 [debug] [Thread-1 (]: Using postgres connection "model.autoparts_dbt.dim_car_owners"
+[0m17:15:37.690977 [debug] [Thread-3 (]: Applying DROP to: "autoparts_dwh"."analytics"."stg_sales__dbt_backup"
+[0m17:15:37.692995 [debug] [Thread-4 (]: Using postgres connection "model.autoparts_dbt.dim_parts"
+[0m17:15:37.694650 [debug] [Thread-2 (]: On model.autoparts_dbt.dim_manufacturers: COMMIT
+[0m17:15:37.696260 [debug] [Thread-1 (]: On model.autoparts_dbt.dim_car_owners: COMMIT
+[0m17:15:37.698004 [debug] [Thread-3 (]: Using postgres connection "model.autoparts_dbt.stg_sales"
+[0m17:15:37.699822 [debug] [Thread-4 (]: On model.autoparts_dbt.dim_parts: COMMIT
+[0m17:15:37.702335 [debug] [Thread-2 (]: SQL status: COMMIT in 0.001 seconds
+[0m17:15:37.703472 [debug] [Thread-1 (]: SQL status: COMMIT in 0.001 seconds
+[0m17:15:37.703949 [debug] [Thread-3 (]: On model.autoparts_dbt.stg_sales: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "autoparts_dbt", "target_name": "dev", "node_id": "model.autoparts_dbt.stg_sales"} */
+drop view if exists "autoparts_dwh"."analytics"."stg_sales__dbt_backup" cascade
+[0m17:15:37.706310 [debug] [Thread-4 (]: SQL status: COMMIT in 0.001 seconds
+[0m17:15:37.707967 [debug] [Thread-2 (]: Applying DROP to: "autoparts_dwh"."analytics"."dim_manufacturers__dbt_backup"
+[0m17:15:37.710931 [debug] [Thread-1 (]: Applying DROP to: "autoparts_dwh"."analytics"."dim_car_owners__dbt_backup"
+[0m17:15:37.716069 [debug] [Thread-3 (]: SQL status: DROP VIEW in 0.001 seconds
+[0m17:15:37.717597 [debug] [Thread-4 (]: Applying DROP to: "autoparts_dwh"."analytics"."dim_parts__dbt_backup"
+[0m17:15:37.721304 [debug] [Thread-2 (]: Using postgres connection "model.autoparts_dbt.dim_manufacturers"
+[0m17:15:37.723493 [debug] [Thread-1 (]: Using postgres connection "model.autoparts_dbt.dim_car_owners"
+[0m17:15:37.725811 [debug] [Thread-3 (]: On model.autoparts_dbt.stg_sales: Close
+[0m17:15:37.727627 [debug] [Thread-4 (]: Using postgres connection "model.autoparts_dbt.dim_parts"
+[0m17:15:37.729947 [debug] [Thread-2 (]: On model.autoparts_dbt.dim_manufacturers: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "autoparts_dbt", "target_name": "dev", "node_id": "model.autoparts_dbt.dim_manufacturers"} */
+drop table if exists "autoparts_dwh"."analytics"."dim_manufacturers__dbt_backup" cascade
+[0m17:15:37.731716 [debug] [Thread-1 (]: On model.autoparts_dbt.dim_car_owners: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "autoparts_dbt", "target_name": "dev", "node_id": "model.autoparts_dbt.dim_car_owners"} */
+drop table if exists "autoparts_dwh"."analytics"."dim_car_owners__dbt_backup" cascade
+[0m17:15:37.733460 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '2d7fa4e0-37d8-41c0-8d66-fe161d907e09', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7da1c0718150>]}
+[0m17:15:37.734848 [debug] [Thread-4 (]: On model.autoparts_dbt.dim_parts: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "autoparts_dbt", "target_name": "dev", "node_id": "model.autoparts_dbt.dim_parts"} */
+drop table if exists "autoparts_dwh"."analytics"."dim_parts__dbt_backup" cascade
+[0m17:15:37.739408 [debug] [Thread-2 (]: SQL status: DROP TABLE in 0.002 seconds
+[0m17:15:37.740953 [debug] [Thread-1 (]: SQL status: DROP TABLE in 0.002 seconds
+[0m17:15:37.741975 [info ] [Thread-3 (]: 5 of 10 OK created sql view model analytics.stg_sales .......................... [[32mCREATE VIEW[0m in 0.29s]
+[0m17:15:37.746244 [debug] [Thread-2 (]: On model.autoparts_dbt.dim_manufacturers: Close
+[0m17:15:37.746576 [debug] [Thread-4 (]: SQL status: DROP TABLE in 0.003 seconds
+[0m17:15:37.748577 [debug] [Thread-1 (]: On model.autoparts_dbt.dim_car_owners: Close
+[0m17:15:37.750645 [debug] [Thread-3 (]: Finished running node model.autoparts_dbt.stg_sales
+[0m17:15:37.752638 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '2d7fa4e0-37d8-41c0-8d66-fe161d907e09', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7da1c337dd90>]}
+[0m17:15:37.754482 [debug] [Thread-4 (]: On model.autoparts_dbt.dim_parts: Close
+[0m17:15:37.756413 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '2d7fa4e0-37d8-41c0-8d66-fe161d907e09', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7da1c33c07d0>]}
+[0m17:15:37.757730 [debug] [Thread-3 (]: Began running node model.autoparts_dbt.fct_returns
+[0m17:15:37.758992 [info ] [Thread-2 (]: 7 of 10 OK created sql table model analytics.dim_manufacturers ................. [[32mSELECT 12[0m in 0.31s]
+[0m17:15:37.762011 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '2d7fa4e0-37d8-41c0-8d66-fe161d907e09', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7da1c3344890>]}
+[0m17:15:37.764438 [info ] [Thread-1 (]: 6 of 10 OK created sql table model analytics.dim_car_owners .................... [[32mSELECT 600[0m in 0.31s]
+[0m17:15:37.767144 [info ] [Thread-3 (]: 9 of 10 START sql table model analytics.fct_returns ............................ [RUN]
+[0m17:15:37.773133 [debug] [Thread-2 (]: Finished running node model.autoparts_dbt.dim_manufacturers
+[0m17:15:37.777089 [info ] [Thread-4 (]: 8 of 10 OK created sql table model analytics.dim_parts ......................... [[32mSELECT 150[0m in 0.32s]
+[0m17:15:37.782067 [debug] [Thread-1 (]: Finished running node model.autoparts_dbt.dim_car_owners
+[0m17:15:37.784882 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.autoparts_dbt.stg_sales, now model.autoparts_dbt.fct_returns)
+[0m17:15:37.787448 [debug] [Thread-2 (]: Began running node model.autoparts_dbt.fct_sales
+[0m17:15:37.790462 [debug] [Thread-4 (]: Finished running node model.autoparts_dbt.dim_parts
+[0m17:15:37.797375 [debug] [Thread-3 (]: Began compiling node model.autoparts_dbt.fct_returns
+[0m17:15:37.799783 [info ] [Thread-2 (]: 10 of 10 START sql table model analytics.fct_sales ............................. [RUN]
+[0m17:15:37.806664 [debug] [Thread-3 (]: Writing injected SQL for node "model.autoparts_dbt.fct_returns"
+[0m17:15:37.809343 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.autoparts_dbt.dim_manufacturers, now model.autoparts_dbt.fct_sales)
+[0m17:15:37.812485 [debug] [Thread-2 (]: Began compiling node model.autoparts_dbt.fct_sales
+[0m17:15:37.815986 [debug] [Thread-2 (]: Writing injected SQL for node "model.autoparts_dbt.fct_sales"
+[0m17:15:37.821565 [debug] [Thread-3 (]: Began executing node model.autoparts_dbt.fct_returns
+[0m17:15:37.823568 [debug] [Thread-2 (]: Began executing node model.autoparts_dbt.fct_sales
+[0m17:15:37.827545 [debug] [Thread-3 (]: Writing runtime sql for node "model.autoparts_dbt.fct_returns"
+[0m17:15:37.832024 [debug] [Thread-2 (]: Writing runtime sql for node "model.autoparts_dbt.fct_sales"
+[0m17:15:37.839807 [debug] [Thread-3 (]: Using postgres connection "model.autoparts_dbt.fct_returns"
+[0m17:15:37.841215 [debug] [Thread-2 (]: Using postgres connection "model.autoparts_dbt.fct_sales"
+[0m17:15:37.841594 [debug] [Thread-3 (]: On model.autoparts_dbt.fct_returns: BEGIN
+[0m17:15:37.843199 [debug] [Thread-2 (]: On model.autoparts_dbt.fct_sales: BEGIN
+[0m17:15:37.844812 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m17:15:37.846158 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m17:15:37.853556 [debug] [Thread-3 (]: SQL status: BEGIN in 0.009 seconds
+[0m17:15:37.853907 [debug] [Thread-2 (]: SQL status: BEGIN in 0.008 seconds
+[0m17:15:37.855465 [debug] [Thread-3 (]: Using postgres connection "model.autoparts_dbt.fct_returns"
+[0m17:15:37.856951 [debug] [Thread-2 (]: Using postgres connection "model.autoparts_dbt.fct_sales"
+[0m17:15:37.858208 [debug] [Thread-3 (]: On model.autoparts_dbt.fct_returns: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "autoparts_dbt", "target_name": "dev", "node_id": "model.autoparts_dbt.fct_returns"} */
+
+  
+    
+
+  create  table "autoparts_dwh"."analytics"."fct_returns__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+with stg_returns as (
+    select * from "autoparts_dwh"."analytics"."stg_returns"
+),
+
+stg_sales as (
+    select * from "autoparts_dwh"."analytics"."stg_sales"
+)
+
+select
+    r.return_id,
+    r.sale_id,
+    r.owner_id,
+    r.part_id,
+    r.returned_at,
+    r.quantity,
+    r.refund_amount,
+    r.reason,
+    r.comment
+from stg_returns r
+-- Data Integrity: повернення має відповідати існуючому продажу
+join stg_sales s on r.sale_id = s.sale_id
+  );
+  
+[0m17:15:37.859838 [debug] [Thread-2 (]: On model.autoparts_dbt.fct_sales: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "autoparts_dbt", "target_name": "dev", "node_id": "model.autoparts_dbt.fct_sales"} */
+
+  
+    
+
+  create  table "autoparts_dwh"."analytics"."fct_sales__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+with stg_sales as (
+    select * from "autoparts_dwh"."analytics"."stg_sales"
+),
+
+stg_car_owners as (
+    select * from "autoparts_dwh"."analytics"."stg_car_owners"
+),
+
+stg_parts as (
+    select * from "autoparts_dwh"."analytics"."stg_parts"
+)
+
+select
+    s.sale_id,
+    s.owner_id,
+    s.part_id,
+    p.manufacturer_id,
+    s.sold_at,
+    s.quantity,
+    s.unit_price,
+    -- Сума продажу = кількість * ціна на момент продажу
+    s.quantity * s.unit_price as total_amount,
+    s.payment_method
+from stg_sales s
+-- Data Integrity: беремо лише продажі з існуючими власниками та запчастинами
+join stg_car_owners o on s.owner_id = o.owner_id
+join stg_parts p on s.part_id = p.part_id
+  );
+  
+[0m17:15:37.868421 [debug] [Thread-3 (]: SQL status: SELECT 400 in 0.007 seconds
+[0m17:15:37.872295 [debug] [Thread-3 (]: Using postgres connection "model.autoparts_dbt.fct_returns"
+[0m17:15:37.873912 [debug] [Thread-3 (]: On model.autoparts_dbt.fct_returns: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "autoparts_dbt", "target_name": "dev", "node_id": "model.autoparts_dbt.fct_returns"} */
+alter table "autoparts_dwh"."analytics"."fct_returns" rename to "fct_returns__dbt_backup"
+[0m17:15:37.875625 [debug] [Thread-3 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m17:15:37.878253 [debug] [Thread-3 (]: Using postgres connection "model.autoparts_dbt.fct_returns"
+[0m17:15:37.879619 [debug] [Thread-3 (]: On model.autoparts_dbt.fct_returns: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "autoparts_dbt", "target_name": "dev", "node_id": "model.autoparts_dbt.fct_returns"} */
+alter table "autoparts_dwh"."analytics"."fct_returns__dbt_tmp" rename to "fct_returns"
+[0m17:15:37.881296 [debug] [Thread-3 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m17:15:37.883276 [debug] [Thread-3 (]: On model.autoparts_dbt.fct_returns: COMMIT
+[0m17:15:37.885566 [debug] [Thread-3 (]: Using postgres connection "model.autoparts_dbt.fct_returns"
+[0m17:15:37.887207 [debug] [Thread-3 (]: On model.autoparts_dbt.fct_returns: COMMIT
+[0m17:15:37.889966 [debug] [Thread-3 (]: SQL status: COMMIT in 0.001 seconds
+[0m17:15:37.892826 [debug] [Thread-3 (]: Applying DROP to: "autoparts_dwh"."analytics"."fct_returns__dbt_backup"
+[0m17:15:37.894398 [debug] [Thread-3 (]: Using postgres connection "model.autoparts_dbt.fct_returns"
+[0m17:15:37.895570 [debug] [Thread-3 (]: On model.autoparts_dbt.fct_returns: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "autoparts_dbt", "target_name": "dev", "node_id": "model.autoparts_dbt.fct_returns"} */
+drop table if exists "autoparts_dwh"."analytics"."fct_returns__dbt_backup" cascade
+[0m17:15:37.898296 [debug] [Thread-3 (]: SQL status: DROP TABLE in 0.002 seconds
+[0m17:15:37.900662 [debug] [Thread-3 (]: On model.autoparts_dbt.fct_returns: Close
+[0m17:15:37.902913 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '2d7fa4e0-37d8-41c0-8d66-fe161d907e09', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7da1c47b0950>]}
+[0m17:15:37.904618 [info ] [Thread-3 (]: 9 of 10 OK created sql table model analytics.fct_returns ....................... [[32mSELECT 400[0m in 0.12s]
+[0m17:15:37.906354 [debug] [Thread-3 (]: Finished running node model.autoparts_dbt.fct_returns
+[0m17:15:37.925709 [debug] [Thread-2 (]: SQL status: SELECT 5000 in 0.063 seconds
+[0m17:15:37.929352 [debug] [Thread-2 (]: Using postgres connection "model.autoparts_dbt.fct_sales"
+[0m17:15:37.931907 [debug] [Thread-2 (]: On model.autoparts_dbt.fct_sales: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "autoparts_dbt", "target_name": "dev", "node_id": "model.autoparts_dbt.fct_sales"} */
+alter table "autoparts_dwh"."analytics"."fct_sales" rename to "fct_sales__dbt_backup"
+[0m17:15:37.933768 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m17:15:37.936768 [debug] [Thread-2 (]: Using postgres connection "model.autoparts_dbt.fct_sales"
+[0m17:15:37.938028 [debug] [Thread-2 (]: On model.autoparts_dbt.fct_sales: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "autoparts_dbt", "target_name": "dev", "node_id": "model.autoparts_dbt.fct_sales"} */
+alter table "autoparts_dwh"."analytics"."fct_sales__dbt_tmp" rename to "fct_sales"
+[0m17:15:37.939726 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m17:15:37.942057 [debug] [Thread-2 (]: On model.autoparts_dbt.fct_sales: COMMIT
+[0m17:15:37.943644 [debug] [Thread-2 (]: Using postgres connection "model.autoparts_dbt.fct_sales"
+[0m17:15:37.944758 [debug] [Thread-2 (]: On model.autoparts_dbt.fct_sales: COMMIT
+[0m17:15:37.950229 [debug] [Thread-2 (]: SQL status: COMMIT in 0.001 seconds
+[0m17:15:37.955074 [debug] [Thread-2 (]: Applying DROP to: "autoparts_dwh"."analytics"."fct_sales__dbt_backup"
+[0m17:15:37.956846 [debug] [Thread-2 (]: Using postgres connection "model.autoparts_dbt.fct_sales"
+[0m17:15:37.958174 [debug] [Thread-2 (]: On model.autoparts_dbt.fct_sales: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "autoparts_dbt", "target_name": "dev", "node_id": "model.autoparts_dbt.fct_sales"} */
+drop table if exists "autoparts_dwh"."analytics"."fct_sales__dbt_backup" cascade
+[0m17:15:37.962321 [debug] [Thread-2 (]: SQL status: DROP TABLE in 0.002 seconds
+[0m17:15:37.964701 [debug] [Thread-2 (]: On model.autoparts_dbt.fct_sales: Close
+[0m17:15:37.966182 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '2d7fa4e0-37d8-41c0-8d66-fe161d907e09', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7da1c375dd50>]}
+[0m17:15:37.967647 [info ] [Thread-2 (]: 10 of 10 OK created sql table model analytics.fct_sales ........................ [[32mSELECT 5000[0m in 0.16s]
+[0m17:15:37.969225 [debug] [Thread-2 (]: Finished running node model.autoparts_dbt.fct_sales
+[0m17:15:37.973125 [debug] [MainThread]: Using postgres connection "master"
+[0m17:15:37.974460 [debug] [MainThread]: On master: BEGIN
+[0m17:15:37.975717 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m17:15:37.985375 [debug] [MainThread]: SQL status: BEGIN in 0.010 seconds
+[0m17:15:37.987232 [debug] [MainThread]: On master: COMMIT
+[0m17:15:37.988522 [debug] [MainThread]: Using postgres connection "master"
+[0m17:15:37.992373 [debug] [MainThread]: On master: COMMIT
+[0m17:15:37.994578 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m17:15:37.995994 [debug] [MainThread]: On master: Close
+[0m17:15:37.997288 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m17:15:37.998475 [debug] [MainThread]: Connection 'model.autoparts_dbt.dim_car_owners' was properly closed.
+[0m17:15:38.001618 [debug] [MainThread]: Connection 'model.autoparts_dbt.fct_sales' was properly closed.
+[0m17:15:38.002962 [debug] [MainThread]: Connection 'model.autoparts_dbt.fct_returns' was properly closed.
+[0m17:15:38.004137 [debug] [MainThread]: Connection 'model.autoparts_dbt.dim_parts' was properly closed.
+[0m17:15:38.005425 [info ] [MainThread]: 
+[0m17:15:38.007969 [info ] [MainThread]: Finished running 5 view models, 5 table models in 0 hours 0 minutes and 1.08 seconds (1.08s).
+[0m17:15:38.013081 [debug] [MainThread]: Command end result
+[0m17:15:38.091920 [info ] [MainThread]: 
+[0m17:15:38.093626 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m17:15:38.095567 [info ] [MainThread]: 
+[0m17:15:38.096991 [info ] [MainThread]: Done. PASS=10 WARN=0 ERROR=0 SKIP=0 TOTAL=10
+[0m17:15:38.098973 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 2.1594331, "process_user_time": 1.759285, "process_kernel_time": 0.213368, "process_mem_max_rss": "117024", "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m17:15:38.102269 [debug] [MainThread]: Command `dbt run` succeeded at 17:15:38.102128 after 2.16 seconds
+[0m17:15:38.103823 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7da1c5e5b350>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7da1c5d92150>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7da1c5c43890>]}
+[0m17:15:38.105372 [debug] [MainThread]: Flushing usage events
+[0m07:47:00.520298 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x722fa21b4a90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x722fa229d3d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x722fa21b4610>]}
+
+
+============================== 07:47:00.526490 | cee9ae5f-a547-4485-89cf-707104e1150b ==============================
+[0m07:47:00.526490 [info ] [MainThread]: Running with dbt=1.8.8
+[0m07:47:00.530032 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/usr/app', 'debug': 'False', 'fail_fast': 'False', 'log_path': '/usr/app/logs', 'version_check': 'True', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'invocation_command': 'dbt debug', 'introspect': 'True', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m07:47:00.542675 [info ] [MainThread]: dbt version: 1.8.8
+[0m07:47:00.544182 [info ] [MainThread]: python version: 3.11.17
+[0m07:47:00.547301 [info ] [MainThread]: python path: /usr/local/bin/python3.11
+[0m07:47:00.551430 [info ] [MainThread]: os info: Linux-6.18.54.1-microsoft-standard-WSL2-x86_64-with-glibc2.41
+[0m07:47:00.623920 [info ] [MainThread]: Using profiles dir at /usr/app
+[0m07:47:00.626083 [info ] [MainThread]: Using profiles.yml file at /usr/app/profiles.yml
+[0m07:47:00.627491 [info ] [MainThread]: Using dbt_project.yml file at /usr/app/dbt_project.yml
+[0m07:47:00.629278 [info ] [MainThread]: adapter type: postgres
+[0m07:47:00.630484 [info ] [MainThread]: adapter version: 1.8.2
+[0m07:47:00.696174 [info ] [MainThread]: Configuration:
+[0m07:47:00.698818 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m07:47:00.700581 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m07:47:00.703685 [info ] [MainThread]: Required dependencies:
+[0m07:47:00.706293 [debug] [MainThread]: Executing "git --help"
+[0m07:47:00.712201 [info ] [MainThread]:  - git [[31mERROR[0m]
+
+[0m07:47:00.714119 [info ] [MainThread]: Connection:
+[0m07:47:00.716378 [info ] [MainThread]:   host: dwh_postgres
+[0m07:47:00.719707 [info ] [MainThread]:   port: 5432
+[0m07:47:00.723226 [info ] [MainThread]:   user: admin
+[0m07:47:00.724932 [info ] [MainThread]:   database: autoparts_dwh
+[0m07:47:00.726430 [info ] [MainThread]:   schema: analytics
+[0m07:47:00.728935 [info ] [MainThread]:   connect_timeout: 10
+[0m07:47:00.731315 [info ] [MainThread]:   role: None
+[0m07:47:00.734254 [info ] [MainThread]:   search_path: None
+[0m07:47:00.735956 [info ] [MainThread]:   keepalives_idle: 0
+[0m07:47:00.738359 [info ] [MainThread]:   sslmode: None
+[0m07:47:00.740591 [info ] [MainThread]:   sslcert: None
+[0m07:47:00.742158 [info ] [MainThread]:   sslkey: None
+[0m07:47:00.744108 [info ] [MainThread]:   sslrootcert: None
+[0m07:47:00.746170 [info ] [MainThread]:   application_name: dbt
+[0m07:47:00.748110 [info ] [MainThread]:   retries: 1
+[0m07:47:00.750428 [info ] [MainThread]: Registered adapter: postgres=1.8.2
+[0m07:47:00.754711 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m07:47:00.782150 [debug] [MainThread]: Using postgres connection "debug"
+[0m07:47:00.783656 [debug] [MainThread]: On debug: select 1 as id
+[0m07:47:00.784803 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m07:47:00.793084 [debug] [MainThread]: SQL status: SELECT 1 in 0.008 seconds
+[0m07:47:00.794928 [debug] [MainThread]: On debug: Close
+[0m07:47:00.796826 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m07:47:00.798457 [info ] [MainThread]: [31m1 check failed:[0m
+[0m07:47:00.800194 [info ] [MainThread]: Error from git --help: Could not find command, ensure it is in the user's PATH: "git"
+
+[0m07:47:00.802389 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_wall_clock_time": 0.3555555, "process_user_time": 0.964703, "process_kernel_time": 0.246221, "process_mem_max_rss": "107212", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m07:47:00.803859 [debug] [MainThread]: Command `dbt debug` failed at 07:47:00.803765 after 0.36 seconds
+[0m07:47:00.805172 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m07:47:00.806431 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x722fa22f6d10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x722fa22f67d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x722fa6595450>]}
+[0m07:47:00.807712 [debug] [MainThread]: Flushing usage events
+[0m07:47:16.369944 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f117b87ded0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f117b873bd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f117b9d21d0>]}
+
+
+============================== 07:47:16.375229 | b215be06-156b-407d-9236-0fe8de93ea9c ==============================
+[0m07:47:16.375229 [info ] [MainThread]: Running with dbt=1.8.8
+[0m07:47:16.377406 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'version_check': 'True', 'log_path': '/usr/app/logs', 'fail_fast': 'False', 'profiles_dir': '/usr/app', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'log_format': 'default', 'static_parser': 'True', 'target_path': 'None', 'invocation_command': 'dbt run', 'send_anonymous_usage_stats': 'True'}
+[0m07:47:16.483685 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'b215be06-156b-407d-9236-0fe8de93ea9c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f117b88ad50>]}
+[0m07:47:16.518681 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'b215be06-156b-407d-9236-0fe8de93ea9c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f117b9bdc10>]}
+[0m07:47:16.521383 [info ] [MainThread]: Registered adapter: postgres=1.8.2
+[0m07:47:16.531399 [debug] [MainThread]: checksum: ec53e341a936509427e16df1c646386a84befec52c1957e3f4359fbc36fc93f5, vars: {}, profile: , target: , version: 1.8.8
+[0m07:47:16.912672 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m07:47:16.913982 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m07:47:16.934585 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'b215be06-156b-407d-9236-0fe8de93ea9c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f117ab702d0>]}
+[0m07:47:17.088078 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'b215be06-156b-407d-9236-0fe8de93ea9c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f117a704fd0>]}
+[0m07:47:17.089272 [info ] [MainThread]: Found 10 models, 5 sources, 423 macros
+[0m07:47:17.098756 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'b215be06-156b-407d-9236-0fe8de93ea9c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f117aed1ad0>]}
+[0m07:47:17.105939 [info ] [MainThread]: 
+[0m07:47:17.109843 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m07:47:17.114649 [debug] [ThreadPool]: Acquiring new postgres connection 'list_autoparts_dwh'
+[0m07:47:17.139452 [debug] [ThreadPool]: Using postgres connection "list_autoparts_dwh"
+[0m07:47:17.141195 [debug] [ThreadPool]: On list_autoparts_dwh: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "autoparts_dbt", "target_name": "dev", "connection_name": "list_autoparts_dwh"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m07:47:17.142466 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m07:47:17.150161 [debug] [ThreadPool]: SQL status: SELECT 5 in 0.008 seconds
+[0m07:47:17.152449 [debug] [ThreadPool]: On list_autoparts_dwh: Close
+[0m07:47:17.154181 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_autoparts_dwh, now create_autoparts_dwh_analytics)
+[0m07:47:17.155594 [debug] [ThreadPool]: Creating schema "database: "autoparts_dwh"
+schema: "analytics"
+"
+[0m07:47:17.159801 [debug] [ThreadPool]: Using postgres connection "create_autoparts_dwh_analytics"
+[0m07:47:17.161003 [debug] [ThreadPool]: On create_autoparts_dwh_analytics: BEGIN
+[0m07:47:17.163992 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m07:47:17.172431 [debug] [ThreadPool]: SQL status: BEGIN in 0.009 seconds
+[0m07:47:17.174027 [debug] [ThreadPool]: Using postgres connection "create_autoparts_dwh_analytics"
+[0m07:47:17.176515 [debug] [ThreadPool]: On create_autoparts_dwh_analytics: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "autoparts_dbt", "target_name": "dev", "connection_name": "create_autoparts_dwh_analytics"} */
+create schema if not exists "analytics"
+[0m07:47:17.180362 [debug] [ThreadPool]: SQL status: CREATE SCHEMA in 0.001 seconds
+[0m07:47:17.182069 [debug] [ThreadPool]: On create_autoparts_dwh_analytics: COMMIT
+[0m07:47:17.183357 [debug] [ThreadPool]: Using postgres connection "create_autoparts_dwh_analytics"
+[0m07:47:17.185465 [debug] [ThreadPool]: On create_autoparts_dwh_analytics: COMMIT
+[0m07:47:17.189005 [debug] [ThreadPool]: SQL status: COMMIT in 0.001 seconds
+[0m07:47:17.193287 [debug] [ThreadPool]: On create_autoparts_dwh_analytics: Close
+[0m07:47:17.196076 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_autoparts_dwh_analytics, now list_autoparts_dwh_analytics)
+[0m07:47:17.202691 [debug] [ThreadPool]: Using postgres connection "list_autoparts_dwh_analytics"
+[0m07:47:17.204527 [debug] [ThreadPool]: On list_autoparts_dwh_analytics: BEGIN
+[0m07:47:17.210769 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m07:47:17.216435 [debug] [ThreadPool]: SQL status: BEGIN in 0.006 seconds
+[0m07:47:17.219818 [debug] [ThreadPool]: Using postgres connection "list_autoparts_dwh_analytics"
+[0m07:47:17.223652 [debug] [ThreadPool]: On list_autoparts_dwh_analytics: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "autoparts_dbt", "target_name": "dev", "connection_name": "list_autoparts_dwh_analytics"} */
+select
+      'autoparts_dwh' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'analytics'
+    union all
+    select
+      'autoparts_dwh' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'analytics'
+    union all
+    select
+      'autoparts_dwh' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'analytics'
+  
+[0m07:47:17.228342 [debug] [ThreadPool]: SQL status: SELECT 0 in 0.003 seconds
+[0m07:47:17.230646 [debug] [ThreadPool]: On list_autoparts_dwh_analytics: ROLLBACK
+[0m07:47:17.231888 [debug] [ThreadPool]: On list_autoparts_dwh_analytics: Close
+[0m07:47:17.235663 [debug] [MainThread]: Using postgres connection "master"
+[0m07:47:17.236857 [debug] [MainThread]: On master: BEGIN
+[0m07:47:17.240528 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m07:47:17.246087 [debug] [MainThread]: SQL status: BEGIN in 0.006 seconds
+[0m07:47:17.247628 [debug] [MainThread]: Using postgres connection "master"
+[0m07:47:17.248644 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "autoparts_dbt", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m07:47:17.252933 [debug] [MainThread]: SQL status: SELECT 0 in 0.003 seconds
+[0m07:47:17.255150 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'b215be06-156b-407d-9236-0fe8de93ea9c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f117b86f990>]}
+[0m07:47:17.256286 [debug] [MainThread]: On master: ROLLBACK
+[0m07:47:17.257615 [debug] [MainThread]: Using postgres connection "master"
+[0m07:47:17.258617 [debug] [MainThread]: On master: BEGIN
+[0m07:47:17.259780 [debug] [MainThread]: SQL status: BEGIN in 0.000 seconds
+[0m07:47:17.260801 [debug] [MainThread]: On master: COMMIT
+[0m07:47:17.261650 [debug] [MainThread]: Using postgres connection "master"
+[0m07:47:17.262584 [debug] [MainThread]: On master: COMMIT
+[0m07:47:17.263666 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m07:47:17.264658 [debug] [MainThread]: On master: Close
+[0m07:47:17.265688 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m07:47:17.270172 [info ] [MainThread]: 
+[0m07:47:17.278138 [debug] [Thread-1 (]: Began running node model.autoparts_dbt.stg_car_owners
+[0m07:47:17.278626 [debug] [Thread-2 (]: Began running node model.autoparts_dbt.stg_manufacturers
+[0m07:47:17.278893 [debug] [Thread-3 (]: Began running node model.autoparts_dbt.stg_parts
+[0m07:47:17.279182 [debug] [Thread-4 (]: Began running node model.autoparts_dbt.stg_returns
+[0m07:47:17.279946 [info ] [Thread-1 (]: 1 of 10 START sql view model analytics.stg_car_owners .......................... [RUN]
+[0m07:47:17.281278 [info ] [Thread-2 (]: 2 of 10 START sql view model analytics.stg_manufacturers ....................... [RUN]
+[0m07:47:17.284704 [info ] [Thread-3 (]: 3 of 10 START sql view model analytics.stg_parts ............................... [RUN]
+[0m07:47:17.290485 [info ] [Thread-4 (]: 4 of 10 START sql view model analytics.stg_returns ............................. [RUN]
+[0m07:47:17.292669 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_autoparts_dwh_analytics, now model.autoparts_dbt.stg_car_owners)
+[0m07:47:17.294779 [debug] [Thread-2 (]: Acquiring new postgres connection 'model.autoparts_dbt.stg_manufacturers'
+[0m07:47:17.296512 [debug] [Thread-3 (]: Acquiring new postgres connection 'model.autoparts_dbt.stg_parts'
+[0m07:47:17.298791 [debug] [Thread-4 (]: Acquiring new postgres connection 'model.autoparts_dbt.stg_returns'
+[0m07:47:17.301174 [debug] [Thread-1 (]: Began compiling node model.autoparts_dbt.stg_car_owners
+[0m07:47:17.302869 [debug] [Thread-2 (]: Began compiling node model.autoparts_dbt.stg_manufacturers
+[0m07:47:17.304175 [debug] [Thread-3 (]: Began compiling node model.autoparts_dbt.stg_parts
+[0m07:47:17.305386 [debug] [Thread-4 (]: Began compiling node model.autoparts_dbt.stg_returns
+[0m07:47:17.310958 [debug] [Thread-1 (]: Writing injected SQL for node "model.autoparts_dbt.stg_car_owners"
+[0m07:47:17.313907 [debug] [Thread-2 (]: Writing injected SQL for node "model.autoparts_dbt.stg_manufacturers"
+[0m07:47:17.316959 [debug] [Thread-3 (]: Writing injected SQL for node "model.autoparts_dbt.stg_parts"
+[0m07:47:17.320020 [debug] [Thread-4 (]: Writing injected SQL for node "model.autoparts_dbt.stg_returns"
+[0m07:47:17.335125 [debug] [Thread-1 (]: Began executing node model.autoparts_dbt.stg_car_owners
+[0m07:47:17.336173 [debug] [Thread-2 (]: Began executing node model.autoparts_dbt.stg_manufacturers
+[0m07:47:17.338903 [debug] [Thread-4 (]: Began executing node model.autoparts_dbt.stg_returns
+[0m07:47:17.345622 [debug] [Thread-3 (]: Began executing node model.autoparts_dbt.stg_parts
+[0m07:47:17.362403 [debug] [Thread-1 (]: Writing runtime sql for node "model.autoparts_dbt.stg_car_owners"
+[0m07:47:17.364328 [debug] [Thread-2 (]: Writing runtime sql for node "model.autoparts_dbt.stg_manufacturers"
+[0m07:47:17.367835 [debug] [Thread-4 (]: Writing runtime sql for node "model.autoparts_dbt.stg_returns"
+[0m07:47:17.371134 [debug] [Thread-3 (]: Writing runtime sql for node "model.autoparts_dbt.stg_parts"
+[0m07:47:17.386981 [debug] [Thread-1 (]: Using postgres connection "model.autoparts_dbt.stg_car_owners"
+[0m07:47:17.389209 [debug] [Thread-1 (]: On model.autoparts_dbt.stg_car_owners: BEGIN
+[0m07:47:17.389579 [debug] [Thread-4 (]: Using postgres connection "model.autoparts_dbt.stg_returns"
+[0m07:47:17.389988 [debug] [Thread-2 (]: Using postgres connection "model.autoparts_dbt.stg_manufacturers"
+[0m07:47:17.391108 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m07:47:17.396485 [debug] [Thread-3 (]: Using postgres connection "model.autoparts_dbt.stg_parts"
+[0m07:47:17.399192 [debug] [Thread-4 (]: On model.autoparts_dbt.stg_returns: BEGIN
+[0m07:47:17.400896 [debug] [Thread-2 (]: On model.autoparts_dbt.stg_manufacturers: BEGIN
+[0m07:47:17.404153 [debug] [Thread-3 (]: On model.autoparts_dbt.stg_parts: BEGIN
+[0m07:47:17.405709 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m07:47:17.407442 [debug] [Thread-1 (]: SQL status: BEGIN in 0.016 seconds
+[0m07:47:17.407790 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m07:47:17.409698 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m07:47:17.412417 [debug] [Thread-1 (]: Using postgres connection "model.autoparts_dbt.stg_car_owners"
+[0m07:47:17.416362 [debug] [Thread-4 (]: SQL status: BEGIN in 0.011 seconds
+[0m07:47:17.417118 [debug] [Thread-1 (]: On model.autoparts_dbt.stg_car_owners: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "autoparts_dbt", "target_name": "dev", "node_id": "model.autoparts_dbt.stg_car_owners"} */
+
+  create view "autoparts_dwh"."analytics"."stg_car_owners__dbt_tmp"
+    
+    
+  as (
+    with source as (
+    select * from "autoparts_dwh"."raw"."car_owners"
+),
+
+-- У raw-шарі є дублікати власників: залишаємо по одному рядку на owner_id
+deduplicated as (
+    select
+        *,
+        row_number() over (
+            partition by owner_id
+            order by registration_date desc
+        ) as row_num
+    from source
+),
+
+renamed_and_cleaned as (
+    select
+        owner_id,
+        full_name,
+        -- Обробка пропущених email-ів
+        coalesce(email, 'unknown@example.com') as email,
+        phone,
+        city,
+        car_brand,
+        cast(car_year as integer) as car_year,
+        cast(registration_date as date) as registration_date
+    from deduplicated
+    where row_num = 1
+)
+
+select * from renamed_and_cleaned
+  );
+[0m07:47:17.418685 [debug] [Thread-4 (]: Using postgres connection "model.autoparts_dbt.stg_returns"
+[0m07:47:17.418950 [debug] [Thread-2 (]: SQL status: BEGIN in 0.011 seconds
+[0m07:47:17.420066 [debug] [Thread-3 (]: SQL status: BEGIN in 0.010 seconds
+[0m07:47:17.421365 [debug] [Thread-4 (]: On model.autoparts_dbt.stg_returns: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "autoparts_dbt", "target_name": "dev", "node_id": "model.autoparts_dbt.stg_returns"} */
+
+  create view "autoparts_dwh"."analytics"."stg_returns__dbt_tmp"
+    
+    
+  as (
+    with source as (
+    select * from "autoparts_dwh"."raw"."returns"
+)
+
+select
+    return_id,
+    sale_id,
+    owner_id,
+    part_id,
+    cast(return_date as timestamp) as returned_at,
+    quantity,
+    cast(refund_amount as numeric(12, 2)) as refund_amount,
+    reason,
+    -- Обробка пропущених коментарів
+    coalesce(comment, 'Коментар відсутній') as comment
+from source
+  );
+[0m07:47:17.422704 [debug] [Thread-2 (]: Using postgres connection "model.autoparts_dbt.stg_manufacturers"
+[0m07:47:17.422967 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.003 seconds
+[0m07:47:17.424325 [debug] [Thread-3 (]: Using postgres connection "model.autoparts_dbt.stg_parts"
+[0m07:47:17.427277 [debug] [Thread-2 (]: On model.autoparts_dbt.stg_manufacturers: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "autoparts_dbt", "target_name": "dev", "node_id": "model.autoparts_dbt.stg_manufacturers"} */
+
+  create view "autoparts_dwh"."analytics"."stg_manufacturers__dbt_tmp"
+    
+    
+  as (
+    with source as (
+    select * from "autoparts_dwh"."raw"."manufacturers"
+)
+
+select
+    manufacturer_id,
+    manufacturer_name,
+    country as manufacturer_country
+from source
+  );
+[0m07:47:17.427593 [debug] [Thread-4 (]: SQL status: CREATE VIEW in 0.002 seconds
+[0m07:47:17.432784 [debug] [Thread-1 (]: Using postgres connection "model.autoparts_dbt.stg_car_owners"
+[0m07:47:17.434337 [debug] [Thread-3 (]: On model.autoparts_dbt.stg_parts: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "autoparts_dbt", "target_name": "dev", "node_id": "model.autoparts_dbt.stg_parts"} */
+
+  create view "autoparts_dwh"."analytics"."stg_parts__dbt_tmp"
+    
+    
+  as (
+    with source as (
+    select * from "autoparts_dwh"."raw"."parts"
+)
+
+select
+    part_id,
+    manufacturer_id,
+    part_name,
+    category,
+    cast(price as numeric(12, 2)) as price,
+    cast(is_active as boolean) as is_active
+from source
+where price >= 0
+  );
+[0m07:47:17.438197 [debug] [Thread-4 (]: Using postgres connection "model.autoparts_dbt.stg_returns"
+[0m07:47:17.438554 [debug] [Thread-2 (]: SQL status: CREATE VIEW in 0.003 seconds
+[0m07:47:17.440447 [debug] [Thread-1 (]: On model.autoparts_dbt.stg_car_owners: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "autoparts_dbt", "target_name": "dev", "node_id": "model.autoparts_dbt.stg_car_owners"} */
+alter table "autoparts_dwh"."analytics"."stg_car_owners__dbt_tmp" rename to "stg_car_owners"
+[0m07:47:17.442994 [debug] [Thread-4 (]: On model.autoparts_dbt.stg_returns: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "autoparts_dbt", "target_name": "dev", "node_id": "model.autoparts_dbt.stg_returns"} */
+alter table "autoparts_dwh"."analytics"."stg_returns__dbt_tmp" rename to "stg_returns"
+[0m07:47:17.443680 [debug] [Thread-3 (]: SQL status: CREATE VIEW in 0.002 seconds
+[0m07:47:17.445889 [debug] [Thread-2 (]: Using postgres connection "model.autoparts_dbt.stg_manufacturers"
+[0m07:47:17.447864 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m07:47:17.448916 [debug] [Thread-4 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m07:47:17.451561 [debug] [Thread-3 (]: Using postgres connection "model.autoparts_dbt.stg_parts"
+[0m07:47:17.452885 [debug] [Thread-2 (]: On model.autoparts_dbt.stg_manufacturers: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "autoparts_dbt", "target_name": "dev", "node_id": "model.autoparts_dbt.stg_manufacturers"} */
+alter table "autoparts_dwh"."analytics"."stg_manufacturers__dbt_tmp" rename to "stg_manufacturers"
+[0m07:47:17.462570 [debug] [Thread-1 (]: On model.autoparts_dbt.stg_car_owners: COMMIT
+[0m07:47:17.464136 [debug] [Thread-4 (]: On model.autoparts_dbt.stg_returns: COMMIT
+[0m07:47:17.465258 [debug] [Thread-3 (]: On model.autoparts_dbt.stg_parts: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "autoparts_dbt", "target_name": "dev", "node_id": "model.autoparts_dbt.stg_parts"} */
+alter table "autoparts_dwh"."analytics"."stg_parts__dbt_tmp" rename to "stg_parts"
+[0m07:47:17.466763 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m07:47:17.469306 [debug] [Thread-1 (]: Using postgres connection "model.autoparts_dbt.stg_car_owners"
+[0m07:47:17.470593 [debug] [Thread-4 (]: Using postgres connection "model.autoparts_dbt.stg_returns"
+[0m07:47:17.472046 [debug] [Thread-3 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m07:47:17.473296 [debug] [Thread-2 (]: On model.autoparts_dbt.stg_manufacturers: COMMIT
+[0m07:47:17.474369 [debug] [Thread-1 (]: On model.autoparts_dbt.stg_car_owners: COMMIT
+[0m07:47:17.475192 [debug] [Thread-4 (]: On model.autoparts_dbt.stg_returns: COMMIT
+[0m07:47:17.476719 [debug] [Thread-3 (]: On model.autoparts_dbt.stg_parts: COMMIT
+[0m07:47:17.478322 [debug] [Thread-2 (]: Using postgres connection "model.autoparts_dbt.stg_manufacturers"
+[0m07:47:17.480256 [debug] [Thread-1 (]: SQL status: COMMIT in 0.001 seconds
+[0m07:47:17.480799 [debug] [Thread-4 (]: SQL status: COMMIT in 0.001 seconds
+[0m07:47:17.481205 [debug] [Thread-3 (]: Using postgres connection "model.autoparts_dbt.stg_parts"
+[0m07:47:17.482158 [debug] [Thread-2 (]: On model.autoparts_dbt.stg_manufacturers: COMMIT
+[0m07:47:17.487562 [debug] [Thread-1 (]: Applying DROP to: "autoparts_dwh"."analytics"."stg_car_owners__dbt_backup"
+[0m07:47:17.489990 [debug] [Thread-4 (]: Applying DROP to: "autoparts_dwh"."analytics"."stg_returns__dbt_backup"
+[0m07:47:17.491129 [debug] [Thread-3 (]: On model.autoparts_dbt.stg_parts: COMMIT
+[0m07:47:17.496143 [debug] [Thread-1 (]: Using postgres connection "model.autoparts_dbt.stg_car_owners"
+[0m07:47:17.496523 [debug] [Thread-2 (]: SQL status: COMMIT in 0.004 seconds
+[0m07:47:17.497589 [debug] [Thread-4 (]: Using postgres connection "model.autoparts_dbt.stg_returns"
+[0m07:47:17.499619 [debug] [Thread-1 (]: On model.autoparts_dbt.stg_car_owners: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "autoparts_dbt", "target_name": "dev", "node_id": "model.autoparts_dbt.stg_car_owners"} */
+drop view if exists "autoparts_dwh"."analytics"."stg_car_owners__dbt_backup" cascade
+[0m07:47:17.499970 [debug] [Thread-3 (]: SQL status: COMMIT in 0.001 seconds
+[0m07:47:17.501887 [debug] [Thread-2 (]: Applying DROP to: "autoparts_dwh"."analytics"."stg_manufacturers__dbt_backup"
+[0m07:47:17.502987 [debug] [Thread-4 (]: On model.autoparts_dbt.stg_returns: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "autoparts_dbt", "target_name": "dev", "node_id": "model.autoparts_dbt.stg_returns"} */
+drop view if exists "autoparts_dwh"."analytics"."stg_returns__dbt_backup" cascade
+[0m07:47:17.504346 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.000 seconds
+[0m07:47:17.506396 [debug] [Thread-3 (]: Applying DROP to: "autoparts_dwh"."analytics"."stg_parts__dbt_backup"
+[0m07:47:17.507800 [debug] [Thread-2 (]: Using postgres connection "model.autoparts_dbt.stg_manufacturers"
+[0m07:47:17.509061 [debug] [Thread-4 (]: SQL status: DROP VIEW in 0.000 seconds
+[0m07:47:17.510918 [debug] [Thread-1 (]: On model.autoparts_dbt.stg_car_owners: Close
+[0m07:47:17.512129 [debug] [Thread-3 (]: Using postgres connection "model.autoparts_dbt.stg_parts"
+[0m07:47:17.513048 [debug] [Thread-2 (]: On model.autoparts_dbt.stg_manufacturers: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "autoparts_dbt", "target_name": "dev", "node_id": "model.autoparts_dbt.stg_manufacturers"} */
+drop view if exists "autoparts_dwh"."analytics"."stg_manufacturers__dbt_backup" cascade
+[0m07:47:17.514634 [debug] [Thread-4 (]: On model.autoparts_dbt.stg_returns: Close
+[0m07:47:17.516637 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b215be06-156b-407d-9236-0fe8de93ea9c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f117c1e14d0>]}
+[0m07:47:17.517829 [debug] [Thread-3 (]: On model.autoparts_dbt.stg_parts: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "autoparts_dbt", "target_name": "dev", "node_id": "model.autoparts_dbt.stg_parts"} */
+drop view if exists "autoparts_dwh"."analytics"."stg_parts__dbt_backup" cascade
+[0m07:47:17.519329 [debug] [Thread-2 (]: SQL status: DROP VIEW in 0.000 seconds
+[0m07:47:17.520081 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b215be06-156b-407d-9236-0fe8de93ea9c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1179b9f910>]}
+[0m07:47:17.521056 [info ] [Thread-1 (]: 1 of 10 OK created sql view model analytics.stg_car_owners ..................... [[32mCREATE VIEW[0m in 0.22s]
+[0m07:47:17.522529 [debug] [Thread-3 (]: SQL status: DROP VIEW in 0.000 seconds
+[0m07:47:17.523971 [debug] [Thread-2 (]: On model.autoparts_dbt.stg_manufacturers: Close
+[0m07:47:17.525118 [info ] [Thread-4 (]: 4 of 10 OK created sql view model analytics.stg_returns ........................ [[32mCREATE VIEW[0m in 0.22s]
+[0m07:47:17.526623 [debug] [Thread-1 (]: Finished running node model.autoparts_dbt.stg_car_owners
+[0m07:47:17.528503 [debug] [Thread-3 (]: On model.autoparts_dbt.stg_parts: Close
+[0m07:47:17.529782 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b215be06-156b-407d-9236-0fe8de93ea9c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1179bcf190>]}
+[0m07:47:17.530734 [debug] [Thread-4 (]: Finished running node model.autoparts_dbt.stg_returns
+[0m07:47:17.531784 [debug] [Thread-1 (]: Began running node model.autoparts_dbt.stg_sales
+[0m07:47:17.532947 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b215be06-156b-407d-9236-0fe8de93ea9c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1179be1a10>]}
+[0m07:47:17.538128 [info ] [Thread-2 (]: 2 of 10 OK created sql view model analytics.stg_manufacturers .................. [[32mCREATE VIEW[0m in 0.24s]
+[0m07:47:17.540784 [debug] [Thread-4 (]: Began running node model.autoparts_dbt.dim_car_owners
+[0m07:47:17.542116 [info ] [Thread-1 (]: 5 of 10 START sql view model analytics.stg_sales ............................... [RUN]
+[0m07:47:17.545248 [info ] [Thread-3 (]: 3 of 10 OK created sql view model analytics.stg_parts .......................... [[32mCREATE VIEW[0m in 0.24s]
+[0m07:47:17.547387 [debug] [Thread-2 (]: Finished running node model.autoparts_dbt.stg_manufacturers
+[0m07:47:17.549987 [info ] [Thread-4 (]: 6 of 10 START sql table model analytics.dim_car_owners ......................... [RUN]
+[0m07:47:17.551880 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.autoparts_dbt.stg_car_owners, now model.autoparts_dbt.stg_sales)
+[0m07:47:17.554133 [debug] [Thread-3 (]: Finished running node model.autoparts_dbt.stg_parts
+[0m07:47:17.556484 [debug] [Thread-2 (]: Began running node model.autoparts_dbt.dim_manufacturers
+[0m07:47:17.557714 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly model.autoparts_dbt.stg_returns, now model.autoparts_dbt.dim_car_owners)
+[0m07:47:17.559912 [debug] [Thread-1 (]: Began compiling node model.autoparts_dbt.stg_sales
+[0m07:47:17.562411 [debug] [Thread-3 (]: Began running node model.autoparts_dbt.dim_parts
+[0m07:47:17.563571 [info ] [Thread-2 (]: 7 of 10 START sql table model analytics.dim_manufacturers ...................... [RUN]
+[0m07:47:17.565692 [debug] [Thread-4 (]: Began compiling node model.autoparts_dbt.dim_car_owners
+[0m07:47:17.569447 [debug] [Thread-1 (]: Writing injected SQL for node "model.autoparts_dbt.stg_sales"
+[0m07:47:17.571116 [info ] [Thread-3 (]: 8 of 10 START sql table model analytics.dim_parts .............................. [RUN]
+[0m07:47:17.572800 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.autoparts_dbt.stg_manufacturers, now model.autoparts_dbt.dim_manufacturers)
+[0m07:47:17.576029 [debug] [Thread-4 (]: Writing injected SQL for node "model.autoparts_dbt.dim_car_owners"
+[0m07:47:17.580576 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.autoparts_dbt.stg_parts, now model.autoparts_dbt.dim_parts)
+[0m07:47:17.581980 [debug] [Thread-2 (]: Began compiling node model.autoparts_dbt.dim_manufacturers
+[0m07:47:17.584405 [debug] [Thread-3 (]: Began compiling node model.autoparts_dbt.dim_parts
+[0m07:47:17.587646 [debug] [Thread-2 (]: Writing injected SQL for node "model.autoparts_dbt.dim_manufacturers"
+[0m07:47:17.591298 [debug] [Thread-3 (]: Writing injected SQL for node "model.autoparts_dbt.dim_parts"
+[0m07:47:17.596618 [debug] [Thread-4 (]: Began executing node model.autoparts_dbt.dim_car_owners
+[0m07:47:17.605567 [debug] [Thread-1 (]: Began executing node model.autoparts_dbt.stg_sales
+[0m07:47:17.614439 [debug] [Thread-4 (]: Writing runtime sql for node "model.autoparts_dbt.dim_car_owners"
+[0m07:47:17.618044 [debug] [Thread-1 (]: Writing runtime sql for node "model.autoparts_dbt.stg_sales"
+[0m07:47:17.618485 [debug] [Thread-3 (]: Began executing node model.autoparts_dbt.dim_parts
+[0m07:47:17.618739 [debug] [Thread-2 (]: Began executing node model.autoparts_dbt.dim_manufacturers
+[0m07:47:17.628132 [debug] [Thread-3 (]: Writing runtime sql for node "model.autoparts_dbt.dim_parts"
+[0m07:47:17.631722 [debug] [Thread-2 (]: Writing runtime sql for node "model.autoparts_dbt.dim_manufacturers"
+[0m07:47:17.643301 [debug] [Thread-1 (]: Using postgres connection "model.autoparts_dbt.stg_sales"
+[0m07:47:17.646740 [debug] [Thread-3 (]: Using postgres connection "model.autoparts_dbt.dim_parts"
+[0m07:47:17.647901 [debug] [Thread-4 (]: Using postgres connection "model.autoparts_dbt.dim_car_owners"
+[0m07:47:17.651111 [debug] [Thread-1 (]: On model.autoparts_dbt.stg_sales: BEGIN
+[0m07:47:17.653165 [debug] [Thread-3 (]: On model.autoparts_dbt.dim_parts: BEGIN
+[0m07:47:17.654340 [debug] [Thread-2 (]: Using postgres connection "model.autoparts_dbt.dim_manufacturers"
+[0m07:47:17.656284 [debug] [Thread-4 (]: On model.autoparts_dbt.dim_car_owners: BEGIN
+[0m07:47:17.659186 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m07:47:17.661062 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m07:47:17.662507 [debug] [Thread-2 (]: On model.autoparts_dbt.dim_manufacturers: BEGIN
+[0m07:47:17.664196 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m07:47:17.668959 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m07:47:17.670890 [debug] [Thread-1 (]: SQL status: BEGIN in 0.012 seconds
+[0m07:47:17.672818 [debug] [Thread-3 (]: SQL status: BEGIN in 0.012 seconds
+[0m07:47:17.674965 [debug] [Thread-4 (]: SQL status: BEGIN in 0.011 seconds
+[0m07:47:17.675243 [debug] [Thread-1 (]: Using postgres connection "model.autoparts_dbt.stg_sales"
+[0m07:47:17.676436 [debug] [Thread-2 (]: SQL status: BEGIN in 0.007 seconds
+[0m07:47:17.676676 [debug] [Thread-3 (]: Using postgres connection "model.autoparts_dbt.dim_parts"
+[0m07:47:17.678310 [debug] [Thread-4 (]: Using postgres connection "model.autoparts_dbt.dim_car_owners"
+[0m07:47:17.679596 [debug] [Thread-1 (]: On model.autoparts_dbt.stg_sales: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "autoparts_dbt", "target_name": "dev", "node_id": "model.autoparts_dbt.stg_sales"} */
+
+  create view "autoparts_dwh"."analytics"."stg_sales__dbt_tmp"
+    
+    
+  as (
+    with source as (
+    select * from "autoparts_dwh"."raw"."sales"
+)
+
+select
+    sale_id,
+    owner_id,
+    part_id,
+    cast(sale_date as timestamp) as sold_at,
+    quantity,
+    cast(unit_price as numeric(12, 2)) as unit_price,
+    payment_method
+from source
+where quantity > 0
+  );
+[0m07:47:17.681197 [debug] [Thread-2 (]: Using postgres connection "model.autoparts_dbt.dim_manufacturers"
+[0m07:47:17.682518 [debug] [Thread-3 (]: On model.autoparts_dbt.dim_parts: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "autoparts_dbt", "target_name": "dev", "node_id": "model.autoparts_dbt.dim_parts"} */
+
+  
+    
+
+  create  table "autoparts_dwh"."analytics"."dim_parts__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+with stg_parts as (
+    select * from "autoparts_dwh"."analytics"."stg_parts"
+),
+
+stg_manufacturers as (
+    select * from "autoparts_dwh"."analytics"."stg_manufacturers"
+)
+
+select
+    p.part_id,
+    p.part_name,
+    p.category,
+    p.price,
+    p.is_active,
+    p.manufacturer_id,
+    m.manufacturer_name,
+    m.manufacturer_country
+from stg_parts p
+left join stg_manufacturers m on p.manufacturer_id = m.manufacturer_id
+  );
+  
+[0m07:47:17.683828 [debug] [Thread-4 (]: On model.autoparts_dbt.dim_car_owners: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "autoparts_dbt", "target_name": "dev", "node_id": "model.autoparts_dbt.dim_car_owners"} */
+
+  
+    
+
+  create  table "autoparts_dwh"."analytics"."dim_car_owners__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+select
+    owner_id,
+    full_name,
+    email,
+    phone,
+    city,
+    car_brand,
+    car_year,
+    registration_date
+from "autoparts_dwh"."analytics"."stg_car_owners"
+  );
+  
+[0m07:47:17.686329 [debug] [Thread-2 (]: On model.autoparts_dbt.dim_manufacturers: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "autoparts_dbt", "target_name": "dev", "node_id": "model.autoparts_dbt.dim_manufacturers"} */
+
+  
+    
+
+  create  table "autoparts_dwh"."analytics"."dim_manufacturers__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+select
+    manufacturer_id,
+    manufacturer_name,
+    manufacturer_country
+from "autoparts_dwh"."analytics"."stg_manufacturers"
+  );
+  
+[0m07:47:17.686634 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.002 seconds
+[0m07:47:17.693603 [debug] [Thread-3 (]: SQL status: SELECT 150 in 0.005 seconds
+[0m07:47:17.695697 [debug] [Thread-1 (]: Using postgres connection "model.autoparts_dbt.stg_sales"
+[0m07:47:17.695977 [debug] [Thread-4 (]: SQL status: SELECT 600 in 0.006 seconds
+[0m07:47:17.696192 [debug] [Thread-2 (]: SQL status: SELECT 12 in 0.005 seconds
+[0m07:47:17.699114 [debug] [Thread-3 (]: Using postgres connection "model.autoparts_dbt.dim_parts"
+[0m07:47:17.700627 [debug] [Thread-1 (]: On model.autoparts_dbt.stg_sales: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "autoparts_dbt", "target_name": "dev", "node_id": "model.autoparts_dbt.stg_sales"} */
+alter table "autoparts_dwh"."analytics"."stg_sales__dbt_tmp" rename to "stg_sales"
+[0m07:47:17.703404 [debug] [Thread-4 (]: Using postgres connection "model.autoparts_dbt.dim_car_owners"
+[0m07:47:17.706585 [debug] [Thread-2 (]: Using postgres connection "model.autoparts_dbt.dim_manufacturers"
+[0m07:47:17.708163 [debug] [Thread-3 (]: On model.autoparts_dbt.dim_parts: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "autoparts_dbt", "target_name": "dev", "node_id": "model.autoparts_dbt.dim_parts"} */
+alter table "autoparts_dwh"."analytics"."dim_parts__dbt_tmp" rename to "dim_parts"
+[0m07:47:17.709943 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m07:47:17.710866 [debug] [Thread-4 (]: On model.autoparts_dbt.dim_car_owners: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "autoparts_dbt", "target_name": "dev", "node_id": "model.autoparts_dbt.dim_car_owners"} */
+alter table "autoparts_dwh"."analytics"."dim_car_owners__dbt_tmp" rename to "dim_car_owners"
+[0m07:47:17.712140 [debug] [Thread-2 (]: On model.autoparts_dbt.dim_manufacturers: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "autoparts_dbt", "target_name": "dev", "node_id": "model.autoparts_dbt.dim_manufacturers"} */
+alter table "autoparts_dwh"."analytics"."dim_manufacturers__dbt_tmp" rename to "dim_manufacturers"
+[0m07:47:17.713590 [debug] [Thread-3 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m07:47:17.715046 [debug] [Thread-1 (]: On model.autoparts_dbt.stg_sales: COMMIT
+[0m07:47:17.716556 [debug] [Thread-4 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m07:47:17.719489 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m07:47:17.724518 [debug] [Thread-3 (]: On model.autoparts_dbt.dim_parts: COMMIT
+[0m07:47:17.725982 [debug] [Thread-1 (]: Using postgres connection "model.autoparts_dbt.stg_sales"
+[0m07:47:17.728695 [debug] [Thread-4 (]: On model.autoparts_dbt.dim_car_owners: COMMIT
+[0m07:47:17.730767 [debug] [Thread-2 (]: On model.autoparts_dbt.dim_manufacturers: COMMIT
+[0m07:47:17.732076 [debug] [Thread-3 (]: Using postgres connection "model.autoparts_dbt.dim_parts"
+[0m07:47:17.733285 [debug] [Thread-1 (]: On model.autoparts_dbt.stg_sales: COMMIT
+[0m07:47:17.734477 [debug] [Thread-4 (]: Using postgres connection "model.autoparts_dbt.dim_car_owners"
+[0m07:47:17.740512 [debug] [Thread-2 (]: Using postgres connection "model.autoparts_dbt.dim_manufacturers"
+[0m07:47:17.741959 [debug] [Thread-3 (]: On model.autoparts_dbt.dim_parts: COMMIT
+[0m07:47:17.744217 [debug] [Thread-1 (]: SQL status: COMMIT in 0.001 seconds
+[0m07:47:17.744467 [debug] [Thread-4 (]: On model.autoparts_dbt.dim_car_owners: COMMIT
+[0m07:47:17.745728 [debug] [Thread-2 (]: On model.autoparts_dbt.dim_manufacturers: COMMIT
+[0m07:47:17.747722 [debug] [Thread-3 (]: SQL status: COMMIT in 0.001 seconds
+[0m07:47:17.750122 [debug] [Thread-1 (]: Applying DROP to: "autoparts_dwh"."analytics"."stg_sales__dbt_backup"
+[0m07:47:17.753487 [debug] [Thread-4 (]: SQL status: COMMIT in 0.001 seconds
+[0m07:47:17.754578 [debug] [Thread-2 (]: SQL status: COMMIT in 0.001 seconds
+[0m07:47:17.756682 [debug] [Thread-3 (]: Applying DROP to: "autoparts_dwh"."analytics"."dim_parts__dbt_backup"
+[0m07:47:17.758098 [debug] [Thread-1 (]: Using postgres connection "model.autoparts_dbt.stg_sales"
+[0m07:47:17.760416 [debug] [Thread-4 (]: Applying DROP to: "autoparts_dwh"."analytics"."dim_car_owners__dbt_backup"
+[0m07:47:17.762571 [debug] [Thread-2 (]: Applying DROP to: "autoparts_dwh"."analytics"."dim_manufacturers__dbt_backup"
+[0m07:47:17.765555 [debug] [Thread-3 (]: Using postgres connection "model.autoparts_dbt.dim_parts"
+[0m07:47:17.767245 [debug] [Thread-1 (]: On model.autoparts_dbt.stg_sales: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "autoparts_dbt", "target_name": "dev", "node_id": "model.autoparts_dbt.stg_sales"} */
+drop view if exists "autoparts_dwh"."analytics"."stg_sales__dbt_backup" cascade
+[0m07:47:17.768568 [debug] [Thread-4 (]: Using postgres connection "model.autoparts_dbt.dim_car_owners"
+[0m07:47:17.769842 [debug] [Thread-2 (]: Using postgres connection "model.autoparts_dbt.dim_manufacturers"
+[0m07:47:17.770889 [debug] [Thread-3 (]: On model.autoparts_dbt.dim_parts: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "autoparts_dbt", "target_name": "dev", "node_id": "model.autoparts_dbt.dim_parts"} */
+drop table if exists "autoparts_dwh"."analytics"."dim_parts__dbt_backup" cascade
+[0m07:47:17.772156 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.000 seconds
+[0m07:47:17.772746 [debug] [Thread-4 (]: On model.autoparts_dbt.dim_car_owners: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "autoparts_dbt", "target_name": "dev", "node_id": "model.autoparts_dbt.dim_car_owners"} */
+drop table if exists "autoparts_dwh"."analytics"."dim_car_owners__dbt_backup" cascade
+[0m07:47:17.773722 [debug] [Thread-2 (]: On model.autoparts_dbt.dim_manufacturers: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "autoparts_dbt", "target_name": "dev", "node_id": "model.autoparts_dbt.dim_manufacturers"} */
+drop table if exists "autoparts_dwh"."analytics"."dim_manufacturers__dbt_backup" cascade
+[0m07:47:17.774826 [debug] [Thread-3 (]: SQL status: DROP TABLE in 0.000 seconds
+[0m07:47:17.776164 [debug] [Thread-1 (]: On model.autoparts_dbt.stg_sales: Close
+[0m07:47:17.777345 [debug] [Thread-4 (]: SQL status: DROP TABLE in 0.000 seconds
+[0m07:47:17.778532 [debug] [Thread-2 (]: SQL status: DROP TABLE in 0.000 seconds
+[0m07:47:17.779909 [debug] [Thread-3 (]: On model.autoparts_dbt.dim_parts: Close
+[0m07:47:17.781053 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b215be06-156b-407d-9236-0fe8de93ea9c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1179300350>]}
+[0m07:47:17.786615 [debug] [Thread-4 (]: On model.autoparts_dbt.dim_car_owners: Close
+[0m07:47:17.788730 [debug] [Thread-2 (]: On model.autoparts_dbt.dim_manufacturers: Close
+[0m07:47:17.789929 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b215be06-156b-407d-9236-0fe8de93ea9c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1179bf32d0>]}
+[0m07:47:17.790942 [info ] [Thread-1 (]: 5 of 10 OK created sql view model analytics.stg_sales .......................... [[32mCREATE VIEW[0m in 0.23s]
+[0m07:47:17.792255 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b215be06-156b-407d-9236-0fe8de93ea9c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1179725ed0>]}
+[0m07:47:17.793342 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b215be06-156b-407d-9236-0fe8de93ea9c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1179b21790>]}
+[0m07:47:17.794368 [info ] [Thread-3 (]: 8 of 10 OK created sql table model analytics.dim_parts ......................... [[32mSELECT 150[0m in 0.21s]
+[0m07:47:17.795602 [debug] [Thread-1 (]: Finished running node model.autoparts_dbt.stg_sales
+[0m07:47:17.796755 [info ] [Thread-4 (]: 6 of 10 OK created sql table model analytics.dim_car_owners .................... [[32mSELECT 600[0m in 0.23s]
+[0m07:47:17.800458 [info ] [Thread-2 (]: 7 of 10 OK created sql table model analytics.dim_manufacturers ................. [[32mSELECT 12[0m in 0.22s]
+[0m07:47:17.803172 [debug] [Thread-3 (]: Finished running node model.autoparts_dbt.dim_parts
+[0m07:47:17.805459 [debug] [Thread-1 (]: Began running node model.autoparts_dbt.fct_returns
+[0m07:47:17.807718 [debug] [Thread-4 (]: Finished running node model.autoparts_dbt.dim_car_owners
+[0m07:47:17.810497 [debug] [Thread-2 (]: Finished running node model.autoparts_dbt.dim_manufacturers
+[0m07:47:17.814327 [debug] [Thread-3 (]: Began running node model.autoparts_dbt.fct_sales
+[0m07:47:17.816619 [info ] [Thread-1 (]: 9 of 10 START sql table model analytics.fct_returns ............................ [RUN]
+[0m07:47:17.822156 [info ] [Thread-3 (]: 10 of 10 START sql table model analytics.fct_sales ............................. [RUN]
+[0m07:47:17.824204 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.autoparts_dbt.stg_sales, now model.autoparts_dbt.fct_returns)
+[0m07:47:17.826251 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.autoparts_dbt.dim_parts, now model.autoparts_dbt.fct_sales)
+[0m07:47:17.828049 [debug] [Thread-1 (]: Began compiling node model.autoparts_dbt.fct_returns
+[0m07:47:17.829881 [debug] [Thread-3 (]: Began compiling node model.autoparts_dbt.fct_sales
+[0m07:47:17.834617 [debug] [Thread-1 (]: Writing injected SQL for node "model.autoparts_dbt.fct_returns"
+[0m07:47:17.839008 [debug] [Thread-3 (]: Writing injected SQL for node "model.autoparts_dbt.fct_sales"
+[0m07:47:17.855453 [debug] [Thread-1 (]: Began executing node model.autoparts_dbt.fct_returns
+[0m07:47:17.856731 [debug] [Thread-3 (]: Began executing node model.autoparts_dbt.fct_sales
+[0m07:47:17.890328 [debug] [Thread-1 (]: Writing runtime sql for node "model.autoparts_dbt.fct_returns"
+[0m07:47:17.893265 [debug] [Thread-3 (]: Writing runtime sql for node "model.autoparts_dbt.fct_sales"
+[0m07:47:17.912028 [debug] [Thread-3 (]: Using postgres connection "model.autoparts_dbt.fct_sales"
+[0m07:47:17.914196 [debug] [Thread-1 (]: Using postgres connection "model.autoparts_dbt.fct_returns"
+[0m07:47:17.918448 [debug] [Thread-3 (]: On model.autoparts_dbt.fct_sales: BEGIN
+[0m07:47:17.922086 [debug] [Thread-1 (]: On model.autoparts_dbt.fct_returns: BEGIN
+[0m07:47:17.923234 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m07:47:17.924253 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m07:47:17.929938 [debug] [Thread-3 (]: SQL status: BEGIN in 0.007 seconds
+[0m07:47:17.930451 [debug] [Thread-1 (]: SQL status: BEGIN in 0.006 seconds
+[0m07:47:17.931329 [debug] [Thread-3 (]: Using postgres connection "model.autoparts_dbt.fct_sales"
+[0m07:47:17.932218 [debug] [Thread-1 (]: Using postgres connection "model.autoparts_dbt.fct_returns"
+[0m07:47:17.933163 [debug] [Thread-3 (]: On model.autoparts_dbt.fct_sales: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "autoparts_dbt", "target_name": "dev", "node_id": "model.autoparts_dbt.fct_sales"} */
+
+  
+    
+
+  create  table "autoparts_dwh"."analytics"."fct_sales__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+with stg_sales as (
+    select * from "autoparts_dwh"."analytics"."stg_sales"
+),
+
+stg_car_owners as (
+    select * from "autoparts_dwh"."analytics"."stg_car_owners"
+),
+
+stg_parts as (
+    select * from "autoparts_dwh"."analytics"."stg_parts"
+)
+
+select
+    s.sale_id,
+    s.owner_id,
+    s.part_id,
+    p.manufacturer_id,
+    s.sold_at,
+    s.quantity,
+    s.unit_price,
+    -- Сума продажу = кількість * ціна на момент продажу
+    s.quantity * s.unit_price as total_amount,
+    s.payment_method
+from stg_sales s
+-- Data Integrity: беремо лише продажі з існуючими власниками та запчастинами
+join stg_car_owners o on s.owner_id = o.owner_id
+join stg_parts p on s.part_id = p.part_id
+  );
+  
+[0m07:47:17.934068 [debug] [Thread-1 (]: On model.autoparts_dbt.fct_returns: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "autoparts_dbt", "target_name": "dev", "node_id": "model.autoparts_dbt.fct_returns"} */
+
+  
+    
+
+  create  table "autoparts_dwh"."analytics"."fct_returns__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+with stg_returns as (
+    select * from "autoparts_dwh"."analytics"."stg_returns"
+),
+
+stg_sales as (
+    select * from "autoparts_dwh"."analytics"."stg_sales"
+)
+
+select
+    r.return_id,
+    r.sale_id,
+    r.owner_id,
+    r.part_id,
+    r.returned_at,
+    r.quantity,
+    r.refund_amount,
+    r.reason,
+    r.comment
+from stg_returns r
+-- Data Integrity: повернення має відповідати існуючому продажу
+join stg_sales s on r.sale_id = s.sale_id
+  );
+  
+[0m07:47:17.941158 [debug] [Thread-1 (]: SQL status: SELECT 400 in 0.005 seconds
+[0m07:47:17.944049 [debug] [Thread-1 (]: Using postgres connection "model.autoparts_dbt.fct_returns"
+[0m07:47:17.945068 [debug] [Thread-1 (]: On model.autoparts_dbt.fct_returns: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "autoparts_dbt", "target_name": "dev", "node_id": "model.autoparts_dbt.fct_returns"} */
+alter table "autoparts_dwh"."analytics"."fct_returns__dbt_tmp" rename to "fct_returns"
+[0m07:47:17.945326 [debug] [Thread-3 (]: SQL status: SELECT 5000 in 0.010 seconds
+[0m07:47:17.946321 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m07:47:17.948355 [debug] [Thread-3 (]: Using postgres connection "model.autoparts_dbt.fct_sales"
+[0m07:47:17.950074 [debug] [Thread-1 (]: On model.autoparts_dbt.fct_returns: COMMIT
+[0m07:47:17.951013 [debug] [Thread-3 (]: On model.autoparts_dbt.fct_sales: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "autoparts_dbt", "target_name": "dev", "node_id": "model.autoparts_dbt.fct_sales"} */
+alter table "autoparts_dwh"."analytics"."fct_sales__dbt_tmp" rename to "fct_sales"
+[0m07:47:17.953031 [debug] [Thread-1 (]: Using postgres connection "model.autoparts_dbt.fct_returns"
+[0m07:47:17.954498 [debug] [Thread-3 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m07:47:17.955342 [debug] [Thread-1 (]: On model.autoparts_dbt.fct_returns: COMMIT
+[0m07:47:17.958475 [debug] [Thread-3 (]: On model.autoparts_dbt.fct_sales: COMMIT
+[0m07:47:17.961014 [debug] [Thread-3 (]: Using postgres connection "model.autoparts_dbt.fct_sales"
+[0m07:47:17.962008 [debug] [Thread-1 (]: SQL status: COMMIT in 0.002 seconds
+[0m07:47:17.962495 [debug] [Thread-3 (]: On model.autoparts_dbt.fct_sales: COMMIT
+[0m07:47:17.964613 [debug] [Thread-1 (]: Applying DROP to: "autoparts_dwh"."analytics"."fct_returns__dbt_backup"
+[0m07:47:17.966499 [debug] [Thread-3 (]: SQL status: COMMIT in 0.001 seconds
+[0m07:47:17.967138 [debug] [Thread-1 (]: Using postgres connection "model.autoparts_dbt.fct_returns"
+[0m07:47:17.969602 [debug] [Thread-3 (]: Applying DROP to: "autoparts_dwh"."analytics"."fct_sales__dbt_backup"
+[0m07:47:17.970704 [debug] [Thread-1 (]: On model.autoparts_dbt.fct_returns: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "autoparts_dbt", "target_name": "dev", "node_id": "model.autoparts_dbt.fct_returns"} */
+drop table if exists "autoparts_dwh"."analytics"."fct_returns__dbt_backup" cascade
+[0m07:47:17.971903 [debug] [Thread-3 (]: Using postgres connection "model.autoparts_dbt.fct_sales"
+[0m07:47:17.973147 [debug] [Thread-1 (]: SQL status: DROP TABLE in 0.000 seconds
+[0m07:47:17.973785 [debug] [Thread-3 (]: On model.autoparts_dbt.fct_sales: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "autoparts_dbt", "target_name": "dev", "node_id": "model.autoparts_dbt.fct_sales"} */
+drop table if exists "autoparts_dwh"."analytics"."fct_sales__dbt_backup" cascade
+[0m07:47:17.975348 [debug] [Thread-1 (]: On model.autoparts_dbt.fct_returns: Close
+[0m07:47:17.976738 [debug] [Thread-3 (]: SQL status: DROP TABLE in 0.000 seconds
+[0m07:47:17.977721 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b215be06-156b-407d-9236-0fe8de93ea9c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f11793efd50>]}
+[0m07:47:17.979194 [debug] [Thread-3 (]: On model.autoparts_dbt.fct_sales: Close
+[0m07:47:17.980401 [info ] [Thread-1 (]: 9 of 10 OK created sql table model analytics.fct_returns ....................... [[32mSELECT 400[0m in 0.15s]
+[0m07:47:17.981891 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b215be06-156b-407d-9236-0fe8de93ea9c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f117af48a90>]}
+[0m07:47:17.983415 [debug] [Thread-1 (]: Finished running node model.autoparts_dbt.fct_returns
+[0m07:47:17.984636 [info ] [Thread-3 (]: 10 of 10 OK created sql table model analytics.fct_sales ........................ [[32mSELECT 5000[0m in 0.16s]
+[0m07:47:17.986881 [debug] [Thread-3 (]: Finished running node model.autoparts_dbt.fct_sales
+[0m07:47:17.989255 [debug] [MainThread]: Using postgres connection "master"
+[0m07:47:17.990365 [debug] [MainThread]: On master: BEGIN
+[0m07:47:17.991265 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m07:47:17.996435 [debug] [MainThread]: SQL status: BEGIN in 0.005 seconds
+[0m07:47:17.997827 [debug] [MainThread]: On master: COMMIT
+[0m07:47:17.999222 [debug] [MainThread]: Using postgres connection "master"
+[0m07:47:18.000431 [debug] [MainThread]: On master: COMMIT
+[0m07:47:18.001588 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m07:47:18.002668 [debug] [MainThread]: On master: Close
+[0m07:47:18.004910 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m07:47:18.006300 [debug] [MainThread]: Connection 'model.autoparts_dbt.fct_returns' was properly closed.
+[0m07:47:18.007809 [debug] [MainThread]: Connection 'model.autoparts_dbt.dim_manufacturers' was properly closed.
+[0m07:47:18.008777 [debug] [MainThread]: Connection 'model.autoparts_dbt.fct_sales' was properly closed.
+[0m07:47:18.009666 [debug] [MainThread]: Connection 'model.autoparts_dbt.dim_car_owners' was properly closed.
+[0m07:47:18.010657 [info ] [MainThread]: 
+[0m07:47:18.011941 [info ] [MainThread]: Finished running 5 view models, 5 table models in 0 hours 0 minutes and 0.90 seconds (0.90s).
+[0m07:47:18.015332 [debug] [MainThread]: Command end result
+[0m07:47:18.082836 [info ] [MainThread]: 
+[0m07:47:18.087919 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m07:47:18.093234 [info ] [MainThread]: 
+[0m07:47:18.094729 [info ] [MainThread]: Done. PASS=10 WARN=0 ERROR=0 SKIP=0 TOTAL=10
+[0m07:47:18.096366 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 1.7723073, "process_user_time": 1.485786, "process_kernel_time": 0.259238, "process_mem_max_rss": "115596", "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m07:47:18.097725 [debug] [MainThread]: Command `dbt run` succeeded at 07:47:18.097605 after 1.77 seconds
+[0m07:47:18.100627 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f117fc5d1d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f117fc5c610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f117fc5d650>]}
+[0m07:47:18.102575 [debug] [MainThread]: Flushing usage events

@@ -49,5 +49,38 @@ services:
       - ./autoparts_dbt:/usr/app
     profiles: ["tools"]
 
+  # Apache Airflow (ЛР №3). Web UI: http://localhost:8080  (логін admin, пароль admin)
+  airflow:
+    build:
+      context: .
+      dockerfile: Dockerfile.airflow
+    container_name: airflow
+    depends_on:
+      dwh_postgres:
+        condition: service_healthy
+    environment:
+      DB_HOST: dwh_postgres
+      DB_PORT: "5432"
+      DB_USER: admin
+      DB_PASSWORD: adminpassword
+      DB_NAME: autoparts_dwh
+      AIRFLOW__CORE__LOAD_EXAMPLES: "False"
+      AIRFLOW__CORE__DAGS_FOLDER: /opt/airflow/dags
+      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: sqlite:////opt/airflow/db/airflow.db
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./airflow/dags:/opt/airflow/dags
+      - ./data_generator.py:/opt/airflow/scripts/data_generator.py:ro
+      - ./load_to_dwh.py:/opt/airflow/scripts/load_to_dwh.py:ro
+      - ./autoparts_dbt:/opt/airflow/dbt/autoparts_dbt
+      - airflow_data:/opt/airflow/db
+    command: >
+      bash -c "airflow db migrate &&
+      (airflow users create --username admin --password admin
+      --firstname Admin --lastname User --role Admin --email admin@example.com || true) &&
+      exec airflow standalone"
+
 volumes:
   pgdata:
+  airflow_data:

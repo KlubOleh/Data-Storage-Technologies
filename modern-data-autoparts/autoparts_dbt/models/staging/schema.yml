@@ -1,0 +1,74 @@
+version: 2
+
+# Data Quality Gates: тести виконуються командою `dbt test`
+# (в Airflow — таск dbt_test_task). Якщо хоч один тест падає — DAG стає червоним.
+
+models:
+  - name: stg_car_owners
+    description: "Власники авто без дублікатів"
+    columns:
+      - name: owner_id
+        description: "Унікальний ідентифікатор власника"
+        tests:
+          - unique
+          - not_null
+      - name: email
+        description: "Email (пропущені значення замінено на заглушку)"
+        tests:
+          - not_null
+
+  - name: stg_manufacturers
+    columns:
+      - name: manufacturer_id
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_parts
+    columns:
+      - name: part_id
+        tests:
+          - unique
+          - not_null
+      - name: manufacturer_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('stg_manufacturers')
+              field: manufacturer_id
+      - name: price
+        tests:
+          - not_null
+
+  - name: stg_sales
+    columns:
+      - name: sale_id
+        tests:
+          - unique
+          - not_null
+      - name: owner_id
+        tests:
+          - relationships:
+              to: ref('stg_car_owners')
+              field: owner_id
+      - name: part_id
+        tests:
+          - relationships:
+              to: ref('stg_parts')
+              field: part_id
+      - name: payment_method
+        tests:
+          - accepted_values:
+              values: ['card', 'cash', 'online']
+
+  - name: stg_returns
+    columns:
+      - name: return_id
+        tests:
+          - unique
+          - not_null
+      - name: sale_id
+        tests:
+          - relationships:
+              to: ref('stg_sales')
+              field: sale_id

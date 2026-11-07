@@ -10,4 +10,5 @@ select
     cast(price as numeric(12, 2)) as price,
     cast(is_active as boolean) as is_active
 from source
+-- Очищення: ціна не може бути від'ємною
 where price >= 0

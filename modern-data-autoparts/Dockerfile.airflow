@@ -1,0 +1,16 @@
+FROM apache/airflow:2.10.5
+
+USER airflow
+
+# Окремі віртуальні середовища: залежності Airflow (SQLAlchemy 1.4) конфліктують
+# з pandas/SQLAlchemy 2.x та dbt, тому кожен інструмент живе у власному venv.
+RUN python -m venv /home/airflow/venvs/etl \
+ && /home/airflow/venvs/etl/bin/pip install --no-cache-dir \
+      pandas==2.2.3 Faker==30.8.2 SQLAlchemy==2.0.36 psycopg2-binary==2.9.10 pyarrow==17.0.0 \
+ && python -m venv /home/airflow/venvs/dbt \
+ && /home/airflow/venvs/dbt/bin/pip install --no-cache-dir \
+      dbt-core==1.8.8 dbt-postgres==1.8.2
+
+RUN mkdir -p /opt/airflow/work /opt/airflow/db /opt/airflow/scripts /opt/airflow/dbt
+
+ENV DBT_SEND_ANONYMOUS_USAGE_STATS=False
